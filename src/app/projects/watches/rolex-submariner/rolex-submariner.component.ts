@@ -9,11 +9,9 @@ import {Component, OnInit} from '@angular/core';
     ]
 })
 export class RolexSubmarinerComponent implements OnInit {
-
     constructor() {
     }
 
     ngOnInit() {
     }
-
 }

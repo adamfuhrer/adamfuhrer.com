@@ -81,23 +81,23 @@
         }
     }
 
-    button.github {
+    .github {
         width: 40px;
         height: 40px;
         position: fixed;
-        bottom: 10px;
+        bottom: 14px;
         left: 50%;
         transform: translateX(-50%);
 
         svg {
-            width: 20px;
-            fill: $oil;
+            width: 18px;
+            fill: #555555;
             transition: $transition-normal;
         }
 
         &:hover, &:focus {
             svg {
-                fill: #555555;
+                fill: $teal-dark;
             }
         }
     }
