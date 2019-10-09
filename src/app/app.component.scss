@@ -1,0 +1,18 @@
+@import '../styles/vars';
+
+:host {
+    display: block;
+    margin-top: 60px;
+
+    .router-wrapper {
+        padding: 70px 40px 120px 40px;
+    }
+
+    @media screen and (max-width: 880px) {
+        .router-wrapper {
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-top: 40px;
+        }
+    }
+}

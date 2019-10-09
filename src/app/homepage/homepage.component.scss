@@ -1,0 +1,112 @@
+@import '../../styles/vars';
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .content-wrapper {
+        width: 100%;
+        max-width: $content-width;
+
+        .name {
+            font-family: $serif;
+            font-size: 5.4rem;
+            font-weight: $regular;
+            color: $oil;
+            letter-spacing: 1.4px;
+            line-height: 1;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 2.4rem;
+            font-style: italic;
+            font-weight: $regular;
+            color: $oil;
+            margin-bottom: 50px;
+        }
+
+        .links-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 50px;
+
+            .link {
+                display: flex;
+                align-items: center;
+
+                + .link {
+                    margin-top: 6px;
+                }
+
+                .icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 16px;
+                    min-width: 16px;
+                    margin-right: 10px;
+
+                    svg {
+                        fill: #AAAAAA;
+                    }
+                }
+
+                .text {
+                    font-size: 1.6rem;
+                    color: $oil;
+                    font-weight: $semi-bold;
+                }
+            }
+        }
+
+        .projects {
+            height: 50px;
+            min-width: 140px;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: $white;
+            border-radius: 5px;
+            background: $teal;
+            transition: $transition-normal;
+            font-weight: $semi-bold;
+            font-size: 1.6rem;
+            letter-spacing: 0.8px;
+
+            &:hover, &:focus {
+                background: lighten($teal, 4%);
+            }
+        }
+    }
+
+    button.github {
+        width: 40px;
+        height: 40px;
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        svg {
+            width: 20px;
+            fill: $oil;
+            transition: $transition-normal;
+        }
+
+        &:hover, &:focus {
+            svg {
+                fill: #555555;
+            }
+        }
+    }
+
+    @media screen and (max-width: 880px) {
+        .content-wrapper {
+            .name {
+                font-size: 4.2rem;
+            }
+        }
+    }
+}

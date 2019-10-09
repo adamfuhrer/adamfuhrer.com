@@ -1,0 +1,33 @@
+@import 'vars';
+
+h1 {
+    font-size: 4.2rem;
+    color: $teal;
+    font-weight: $bold;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 2.4rem;
+    color: $oil;
+    font-weight: $light;
+    font-style: italic;
+    font-family: $serif;
+
+    &.large {
+        font-size: 6.2rem;
+    }
+}
+
+h3 {
+    font-size: 2.4rem;
+    color: $oil;
+    font-weight: $semi-bold;
+}
+
+h4 {
+    font-size: 1.6rem;
+    color: $grey;
+    font-weight: $regular;
+    font-style: italic;
+}

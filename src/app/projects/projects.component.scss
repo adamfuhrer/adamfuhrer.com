@@ -1,0 +1,130 @@
+@import '../../styles/vars';
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .projects-wrapper {
+        width: 100%;
+        max-width: $content-width;
+
+        h3 {
+            margin-bottom: 24px;
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+
+            .wrapper {
+                display: flex;
+
+                + .wrapper {
+                    margin-top: 14px;
+                }
+
+                .title {
+                    width: 80px;
+                    min-width: 80px;
+                }
+
+                .text {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+
+    .cards-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+        .card {
+            display: flex;
+            position: relative;
+            width: 390px;
+            min-width: 390px;
+            border: 1px solid $light-grey;
+            border-radius: 8px;
+            height: 240px;
+            padding: 20px;
+            background: $off-white;
+            box-shadow: $box-shadow-weak;
+            margin-top: 20px;
+            transition: $transition-normal;
+
+            &:nth-child(even) {
+                margin-left: 20px;
+            }
+
+            &:hover, &:focus {
+                transition: $transition-normal;
+                cursor: pointer;
+                transform: translateY(-4px);
+                box-shadow: $box-shadow-strong;
+                outline: none;
+            }
+
+            .text-wrapper {
+                display: flex;
+                flex-direction: column;
+                margin-right: 150px;
+
+                .name {
+
+                }
+
+                .model {
+                    font-weight: $regular;
+                    margin-bottom: 24px;
+                    font-size: 1.6rem;
+                    color: #666666;
+                }
+
+                .label {
+                    font-size: 1.6rem;
+                }
+
+                .precision {
+                    color: $pink;
+                    font-weight: $semi-bold;
+                    font-size: 1.6rem;
+                }
+            }
+
+            img {
+                position: absolute;
+
+                &.seiko {
+                    top: 12px;
+                    right: 14px;
+                    width: 150px;
+                }
+
+                &.rolex {
+                    top: 28px;
+                    right: 8px;
+                    width: 160px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 880px) {
+        .cards-wrapper {
+            flex-direction: column;
+
+            .card {
+                display: flex;
+                width: 100%;
+                min-width: 0;
+
+                &:nth-child(even) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

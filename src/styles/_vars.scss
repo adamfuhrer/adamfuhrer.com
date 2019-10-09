@@ -1,0 +1,40 @@
+// Fonts
+$sans-serif: "Lato", Helvetica, Arial, sans-serif;
+$serif: 'Vidaloka', serif;
+
+// Dimensions
+$content-width: 800px;
+
+// Colours
+$teal: #008299;
+$teal-dark: #006475;
+$orange: #C15801;
+$pink: #d03a77;
+$green: #4DB34D;
+$red: #B81414;
+$gold: #E69900;
+
+$oil: #333333;
+$grey: #999999;
+$light-grey: #DDDDDD;
+$off-white: #F5F5F5;
+$white: #FFFFFF;
+
+// Shadows
+//$box-shadow-weak: 0 2px 6px rgba(0, 0, 0, 0.10);
+$box-shadow-weak: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+$box-shadow-strong: 0 2px 12px rgba(0, 0, 0, 0.20);
+
+// Transitions
+$ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+$transition-normal: all 350ms $ease 0s;
+
+// Font Weights
+$thin: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$heavy: 800;
+$black: 900;
