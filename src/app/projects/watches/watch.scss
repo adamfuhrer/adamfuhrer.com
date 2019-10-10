@@ -38,7 +38,7 @@
 
                     .key {
                         width: 130px;
-                        color: #777777;
+                        color: $grey;
                     }
 
                     .value {
@@ -73,6 +73,11 @@
                 max-width: 240px;
                 height: 170px;
                 flex: 1 1 0;
+            }
+
+            h3 {
+                line-height: 1;
+                margin-bottom: 6px;
             }
 
             .week {
@@ -121,17 +126,14 @@
                 justify-content: center;
                 flex-direction: column;
                 padding-left: 60px;
-                padding-top: 10px;
+                padding-top: 14px;
 
                 &.end {
                     height: 100px
                 }
 
                 .seconds {
-                    font-size: 2.4rem;
-                    font-weight: $semi-bold;
                     font-style: italic;
-                    color: $oil;
                 }
 
                 .average-per-day {
