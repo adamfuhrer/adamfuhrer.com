@@ -15,6 +15,7 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 14px;
+            text-align: center;
         }
 
         .information-wrapper {
@@ -165,8 +166,8 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            height: 180px;
-            max-width: 340px;
+            height: 160px;
+            max-width: 320px;
 
             .results-label {
                 display: flex;
@@ -208,7 +209,7 @@
     .link {
         display: flex;
         justify-content: center;
-        margin-top: 40px;
+        margin-top: 20px;
 
         a {
             margin-left: 6px;
