@@ -27,7 +27,7 @@ a {
     transition: $transition-normal;
 
     &:hover, &:focus {
-        color: lighten($teal, 10%);
+        color: lighten($teal, 6%);
         outline: none;
     }
 }

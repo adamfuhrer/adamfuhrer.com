@@ -1,4 +1,5 @@
 @import '../../styles/vars';
+$head-shot-image-width: 130px;
 
 :host {
     display: flex;
@@ -6,8 +7,29 @@
     align-items: center;
 
     .content-wrapper {
+        display: flex;
         width: 100%;
         max-width: $content-width;
+
+        img {
+            width: $head-shot-image-width;
+            height: $head-shot-image-width;
+            min-width: $head-shot-image-width;
+            margin-right: 40px;
+        }
+
+        .right-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .name-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: $head-shot-image-width;
+            margin-bottom: 20px;
+        }
 
         .name {
             font-family: $serif;
@@ -16,8 +38,7 @@
             color: $oil;
             letter-spacing: 1.4px;
             line-height: 1;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
         }
 
         .title {
@@ -25,7 +46,6 @@
             font-style: italic;
             font-weight: $regular;
             color: $oil;
-            margin-bottom: 50px;
         }
 
         .links-wrapper {
@@ -57,13 +77,14 @@
                 .text {
                     font-size: 1.6rem;
                     color: $oil;
-                    font-weight: $semi-bold;
+                    font-weight: $medium;
                 }
             }
         }
 
         .projects {
             height: 50px;
+            width: 140px;
             min-width: 140px;
             padding-left: 20px;
             padding-right: 20px;
@@ -86,7 +107,7 @@
         align-items: center;
         justify-content: center;
         position: absolute;
-        bottom: 20px;
+        bottom: 24px;
         left: calc(50% - 20px); // 20px is half button width
         width: 40px;
         height: 40px;
@@ -111,10 +132,25 @@
         }
     }
 
-    @media screen and (max-width: 880px) {
+    @media screen and (max-width: 800px) {
         .content-wrapper {
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .name-wrapper {
+                height: 100%;
+                align-items: center;
+                margin-bottom: 40px;
+            }
+
             .name {
                 font-size: 4.2rem;
+                text-align: center;
             }
         }
     }
