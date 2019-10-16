@@ -14,15 +14,32 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 14px;
+            flex-direction: column;
+            margin-top: 10px;
+            margin-bottom: 50px;
             text-align: center;
+
+            .precision {
+                display: flex;
+                justify-content: center;
+                font-size: 2rem;
+                font-weight: $regular;
+
+                .label {
+                    margin-right: 8px;
+                }
+
+                .text {
+                    color: $orange;
+                }
+            }
         }
 
         .information-wrapper {
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 300px;
+            min-height: 290px;
 
             img {
                 width: 200px;
@@ -38,7 +55,7 @@
                     display: flex;
 
                     .key {
-                        width: 130px;
+                        width: 140px;
                         color: $grey;
                     }
 
@@ -47,7 +64,7 @@
                         color: $oil;
 
                         &.precision {
-                            color: $pink;
+                            color: $orange;
                         }
                     }
 
@@ -62,7 +79,14 @@
     .timeline {
         display: flex;
         flex-direction: column;
-        margin-top: 60px;
+        margin-top: 50px;
+
+        .timeline-label {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
         .week-row {
             display: flex;
@@ -133,7 +157,10 @@
                 }
 
                 .seconds {
+                    font-weight: $medium;
+                    color: $oil;
                     font-style: italic;
+                    font-size: 2.4rem;
                 }
 
                 .average-per-day {
@@ -142,12 +169,12 @@
                     font-size: 1.6rem;
 
                     .label {
-                        font-weight: $regular;
+                        font-weight: $medium;
                     }
 
                     .text {
                         margin-left: 6px;
-                        color: $pink;
+                        color: $orange;
                         font-weight: $medium;
                     }
                 }
@@ -158,31 +185,25 @@
     .results-wrapper {
         display: flex;
         justify-content: center;
-        margin-top: 20px;
 
         .card {
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            height: 160px;
-            max-width: 320px;
+            height: 140px;
+            max-width: 220px;
 
             .results-label {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 margin-bottom: 10px;
-                font-size: 3rem;
-                font-weight: $regular;
-                line-height: 1;
-                font-style: italic;
-                color: $oil;
             }
 
             .result {
                 font-size: 2.4rem;
-                color: $pink;
+                color: $orange;
                 font-weight: $semi-bold;
 
                 + .result {
@@ -196,7 +217,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 50px;
+        margin-top: 90px;
 
         img {
             border-radius: 10px;
@@ -205,15 +226,6 @@
         }
     }
 
-    .link {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-
-        a {
-            margin-left: 6px;
-        }
-    }
 
     @media screen and (max-width: 760px) {
         h2 {
@@ -222,6 +234,14 @@
         }
 
         .content-wrapper {
+            .watch-name {
+                margin-bottom: 40px;
+
+                .precision {
+                    font-size: 1.6rem;
+                }
+            }
+
             .information-wrapper {
                 img {
                     width: 140px;
@@ -230,8 +250,6 @@
                 }
 
                 .information {
-                    font-size: 1.4rem;
-
                     .key-value-pair {
                         flex-direction: column;
                     }
@@ -246,7 +264,7 @@
 
                     .average-per-day {
                         flex-direction: column;
-                        margin-top: 4px;
+                        margin-top: 6px;
 
                         .text {
                             margin-left: 0;

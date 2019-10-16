@@ -22,7 +22,7 @@ h2 {
 h3 {
     font-size: 2.4rem;
     color: $oil;
-    font-weight: $semi-bold;
+    font-weight: $medium;
 }
 
 h4 {
@@ -30,4 +30,12 @@ h4 {
     color: $grey;
     font-weight: $regular;
     font-style: italic;
+}
+
+h5 {
+    font-size: 2.4rem;
+    color: #666666;
+    font-weight: $light;
+    font-style: italic;
+    letter-spacing: 1px;
 }
