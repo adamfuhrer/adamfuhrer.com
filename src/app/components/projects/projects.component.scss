@@ -32,7 +32,7 @@
                 }
 
                 &.link {
-                    &:hover {
+                    &:hover, &:focus {
                         color: $teal;
                         cursor: pointer;
                         transition: $transition-normal;
@@ -43,9 +43,7 @@
                     }
 
                     &:focus {
-                        color: $teal;
                         outline: none;
-                        transition: $transition-normal;
                     }
                 }
             }

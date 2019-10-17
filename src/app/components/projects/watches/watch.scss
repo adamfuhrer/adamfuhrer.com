@@ -21,11 +21,13 @@
             .precision {
                 display: flex;
                 justify-content: center;
+                align-items: center;
                 font-size: 2rem;
                 font-weight: $regular;
 
                 .label {
                     margin-right: 8px;
+                    color: $grey;
                 }
 
                 .text {
@@ -121,7 +123,7 @@
                     height: 17px;
                     border-radius: 50%;
                     background: $white;
-                    border: 2px solid $grey;
+                    border: 2px solid #666666;
                     box-shadow: $box-shadow-weak;
                 }
 
