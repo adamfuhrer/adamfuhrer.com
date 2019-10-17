@@ -1,21 +1,24 @@
 @import 'vars';
 
 h1 {
-    font-size: 4.2rem;
-    color: $teal;
-    font-weight: $bold;
-    margin-bottom: 40px;
+    font-family: $serif;
+    font-size: 4rem;
+    color: $oil;
+    font-weight: $regular;
+    letter-spacing: 0.6px;
+    line-height: 1.4;
 }
 
 h2 {
+    font-family: $serif;
     font-size: 2.4rem;
     color: $oil;
     font-weight: $light;
     font-style: italic;
-    font-family: $serif;
 
     &.large {
-        font-size: 6.2rem;
+        letter-spacing: 0.8px;
+        font-size: 5.4rem;
     }
 }
 
@@ -26,9 +29,9 @@ h3 {
 }
 
 h4 {
-    font-size: 1.6rem;
-    color: $grey;
-    font-weight: $regular;
+    font-size: 1.8rem;
+    color: $black;
+    font-weight: $light;
     font-style: italic;
 }
 

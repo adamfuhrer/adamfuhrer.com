@@ -1,0 +1,58 @@
+@import '../../../styles/vars';
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .wrapper {
+        width: 100%;
+        max-width: $content-width;
+
+        section {
+            + section {
+                margin-top: 60px;
+            }
+
+            .project-name {
+                display: inline-flex;
+                align-items: center;
+                transition: $transition-normal;
+                color: $oil;
+
+                svg {
+                    width: 24px;
+                    min-width: 24px;
+                    margin-left: 14px;
+                    transition: $transition-normal;
+
+                    path {
+                        fill: $oil;
+                    }
+                }
+
+                &.link {
+                    &:hover {
+                        color: $teal;
+                        cursor: pointer;
+                        transition: $transition-normal;
+
+                        svg {
+                            margin-left: 22px;
+                        }
+                    }
+
+                    &:focus {
+                        color: $teal;
+                        outline: none;
+                        transition: $transition-normal;
+                    }
+                }
+            }
+
+            .coming-soon {
+                margin-bottom: 14px;
+            }
+        }
+    }
+}

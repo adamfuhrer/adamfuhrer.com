@@ -2,17 +2,9 @@
 
 :host {
     display: block;
-    margin-top: 60px;
+    padding: 80px 40px 180px 40px;
 
-    .router-wrapper {
-        padding: 70px 40px 180px 40px;
-    }
-
-    @media screen and (max-width: 800px) {
-        .router-wrapper {
-            padding-left: 24px;
-            padding-right: 24px;
-            padding-top: 40px;
-        }
+    @media screen and (max-width: 880px) {
+        padding: 40px 24px 100px 24px;
     }
 }

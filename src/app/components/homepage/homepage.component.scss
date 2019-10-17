@@ -1,5 +1,5 @@
-@import '../../styles/vars';
-$head-shot-image-width: 130px;
+@import '../../../styles/vars';
+$head-shot-image-width: 180px;
 
 :host {
     display: flex;
@@ -15,7 +15,8 @@ $head-shot-image-width: 130px;
             width: $head-shot-image-width;
             height: $head-shot-image-width;
             min-width: $head-shot-image-width;
-            margin-right: 40px;
+            margin-right: 44px;
+            margin-top: 20px;
         }
 
         .right-content {
@@ -27,8 +28,7 @@ $head-shot-image-width: 130px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            height: $head-shot-image-width;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .name {
@@ -91,7 +91,7 @@ $head-shot-image-width: 130px;
             color: $white;
             border-radius: 5px;
             background: $teal;
-            transition: $transition-normal;
+            transition: background 350ms $ease 0s;;
             font-weight: $semi-bold;
             font-size: 1.6rem;
             letter-spacing: 0.8px;
@@ -132,14 +132,20 @@ $head-shot-image-width: 130px;
         }
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 880px) {
+        margin-top: -40px;
+
         .content-wrapper {
             flex-direction: column;
             align-items: center;
 
             img {
-                margin-right: 0;
+                margin-top: 0;
                 margin-bottom: 20px;
+                margin-right: 0;
+                width: 150px;
+                height: 150px;
+                min-width: 150px;
             }
 
             .name-wrapper {
@@ -151,6 +157,10 @@ $head-shot-image-width: 130px;
             .name {
                 font-size: 4.2rem;
                 text-align: center;
+            }
+
+            .projects {
+                width: 100%;
             }
         }
 

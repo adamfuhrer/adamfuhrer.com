@@ -4,33 +4,36 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {HeaderComponent} from './header/header.component';
-import {HomepageComponent} from './homepage/homepage.component';
-import {ProjectsComponent} from './projects/projects.component';
-import {SeikoFiveComponent} from './projects/watches/seiko-five/seiko-five.component';
-import {RolexSubmarinerComponent} from './projects/watches/rolex-submariner/rolex-submariner.component';
-import {ProjectsBackButtonComponent} from './projects/projects-back-button/projects-back-button.component';
+import {HomepageComponent} from './components/homepage/homepage.component';
+import {ProjectsComponent} from './components/projects/projects.component';
+import {SeikoFiveComponent} from './components/projects/watches/seiko-five/seiko-five.component';
+import {RolexSubmarinerComponent} from './components/projects/watches/rolex-submariner/rolex-submariner.component';
 import {FadeInDirective} from './directives/fade-in.directive';
-import {PinboardLinksComponent} from './pinboard-links/pinboard-links.component';
+import {PinboardLinksComponent} from './components/pinboard-links/pinboard-links.component';
+import {NavigationComponent} from './components/navigation/navigation.component';
+import {MechanicalWatchesAccuracyComponent} from './components/projects/watches/mechanical-watches-accuracy/mechanical-watches-accuracy.component';
+import {NavigationService} from './services/navigation.service';
 
 @NgModule({
     declarations: [
         AppComponent,
-        HeaderComponent,
         HomepageComponent,
         ProjectsComponent,
         SeikoFiveComponent,
         RolexSubmarinerComponent,
-        ProjectsBackButtonComponent,
         FadeInDirective,
-        PinboardLinksComponent
+        PinboardLinksComponent,
+        NavigationComponent,
+        MechanicalWatchesAccuracyComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule
     ],
-    providers: [],
+    providers: [
+        NavigationService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

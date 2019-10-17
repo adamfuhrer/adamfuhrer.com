@@ -1,0 +1,73 @@
+@import '../../../styles/vars';
+
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    margin-bottom: 50px;
+
+    nav {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: $content-width;
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            height: 40px;
+            color: $grey;
+            font-size: 1.6rem;
+            font-weight: $medium;
+            transition: $transition-normal;
+
+            &:not(:last-child) {
+                margin-right: 30px;
+
+                &::after {
+                    content: '/';
+                    color: $grey;
+                    position: absolute;
+                    top: 8px;
+                    right: -19px;
+                }
+            }
+
+            &:hover {
+                transition: $transition-normal;
+                color: $oil;
+                cursor: pointer;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &.is-active {
+                color: $teal;
+
+                &:hover {
+                    color: $teal;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 880px) {
+        nav {
+            .breadcrumb {
+                height: 30px;
+
+                &:not(:last-child) {
+                    &::after {
+                        top: 3px;
+                    }
+                }
+            }
+        }
+    }
+}

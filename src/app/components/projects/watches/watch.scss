@@ -1,4 +1,4 @@
-@import '../../../styles/vars';
+@import '../../../../styles/vars';
 
 :host {
     display: flex;
@@ -15,7 +15,6 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            margin-top: 10px;
             margin-bottom: 50px;
             text-align: center;
 
@@ -54,6 +53,10 @@
                 .key-value-pair {
                     display: flex;
 
+                    + .key-value-pair {
+                        margin-top: 6px;
+                    }
+
                     .key {
                         width: 140px;
                         color: $grey;
@@ -66,10 +69,6 @@
                         &.precision {
                             color: $orange;
                         }
-                    }
-
-                    + .key-value-pair {
-                        margin-top: 6px;
                     }
                 }
             }
@@ -105,8 +104,7 @@
             }
 
             .week {
-                position: relative;
-                border-right: 4px solid $light-grey;
+                border-right: 3px solid $light-grey;
                 padding-right: 24px;
 
                 &.end {
@@ -119,23 +117,16 @@
                     position: absolute;
                     top: 0;
                     right: -10px;
-                    width: 16px;
-                    height: 16px;
+                    width: 17px;
+                    height: 17px;
                     border-radius: 50%;
-                    background: $grey;
+                    background: $white;
+                    border: 2px solid $grey;
                     box-shadow: $box-shadow-weak;
                 }
 
-                &.start {
-                    &::after {
-                        background: $green;
-                    }
-                }
-
-                &.end {
-                    &::after {
-                        background: $red;
-                    }
+                h3 {
+                    margin-top: -4px;
                 }
 
                 .date {
@@ -192,7 +183,7 @@
             justify-content: center;
             flex-direction: column;
             height: 140px;
-            max-width: 220px;
+            max-width: 240px;
 
             .results-label {
                 display: flex;
@@ -229,7 +220,6 @@
 
     @media screen and (max-width: 760px) {
         h2 {
-            margin-top: 30px;
             font-size: 4rem;
         }
 
