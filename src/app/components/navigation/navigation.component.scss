@@ -34,6 +34,7 @@
                     position: absolute;
                     top: 10px;
                     right: -19px;
+                    z-index: -1; // So the element isn't clickable
                 }
             }
 
