@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Breadcrumb, NavigationService} from '../../../../services/navigation.service';
+import {Title} from '@angular/platform-browser';
 
 @Component({
     selector: 'app-rolex-submariner',
@@ -10,10 +11,13 @@ import {Breadcrumb, NavigationService} from '../../../../services/navigation.ser
     ]
 })
 export class RolexSubmarinerComponent implements OnInit {
-    constructor(private navigationService: NavigationService) {
+    constructor(private navigationService: NavigationService,
+                private titleService: Title) {
     }
 
     ngOnInit() {
+        this.titleService.setTitle('Adam Fuhrer · Rolex Submariner Accuracy');
+
         this.navigationService.emitBreadcrumbItems([
             {
                 text: 'HOME',

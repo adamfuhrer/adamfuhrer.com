@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {NavigationService} from '../../services/navigation.service';
+import {Title} from '@angular/platform-browser';
 
 @Component({
     selector: 'app-homepage',
@@ -7,10 +8,13 @@ import {NavigationService} from '../../services/navigation.service';
     styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
-    constructor(private navigationService: NavigationService) {
+    constructor(private navigationService: NavigationService,
+                private titleService: Title) {
     }
 
     ngOnInit() {
+        this.titleService.setTitle('Adam Fuhrer');
+
         // Don't show breadcrumbs on homepage
         this.navigationService.emitBreadcrumbItems([]);
     }

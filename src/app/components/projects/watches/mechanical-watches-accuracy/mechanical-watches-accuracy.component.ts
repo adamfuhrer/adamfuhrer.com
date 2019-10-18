@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Breadcrumb, NavigationService} from '../../../../services/navigation.service';
+import {Title} from '@angular/platform-browser';
 
 @Component({
     selector: 'app-mechanical-watches-accuracy',
@@ -7,10 +8,13 @@ import {Breadcrumb, NavigationService} from '../../../../services/navigation.ser
     styleUrls: ['./mechanical-watches-accuracy.component.scss']
 })
 export class MechanicalWatchesAccuracyComponent implements OnInit {
-    constructor(private navigationService: NavigationService) {
+    constructor(private navigationService: NavigationService,
+                private titleService: Title) {
     }
 
     ngOnInit() {
+        this.titleService.setTitle('Adam Fuhrer · Accuracy of Mechanical Watches');
+
         this.navigationService.emitBreadcrumbItems([
             {
                 text: 'HOME',
