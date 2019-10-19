@@ -33,7 +33,7 @@ a {
 }
 
 .card {
-    border: 1px solid $light-grey;
+    border: 1px solid #E5E5E5;
     border-radius: 10px;
     background: $off-white;
     width: 100%;
@@ -43,7 +43,7 @@ a {
         transition: $transition-normal;
 
         &:hover, &:focus {
-            transform: translateY(-4px);
+            transform: translateY(-5px);
             box-shadow: $box-shadow-strong;
             transition: $transition-normal;
             outline: none;
