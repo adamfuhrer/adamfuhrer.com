@@ -16,7 +16,7 @@ export class RolexSubmarinerComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.titleService.setTitle('Adam Fuhrer · Rolex Submariner Accuracy');
+        this.titleService.setTitle('Rolex Submariner Accuracy · Adam Fuhrer');
 
         this.navigationService.emitBreadcrumbItems([
             {

@@ -13,7 +13,7 @@ export class ProjectsComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.titleService.setTitle('Adam Fuhrer · Projects');
+        this.titleService.setTitle('Projects · Adam Fuhrer');
 
         this.navigationService.emitBreadcrumbItems([
             {

@@ -13,7 +13,7 @@ export class MechanicalWatchesAccuracyComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.titleService.setTitle('Adam Fuhrer · Accuracy of Mechanical Watches');
+        this.titleService.setTitle('Accuracy of Mechanical Watches · Adam Fuhrer');
 
         this.navigationService.emitBreadcrumbItems([
             {
