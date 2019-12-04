@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {Breadcrumb, NavigationService} from '../../services/navigation.service';
 
 @Component({
@@ -6,15 +6,12 @@ import {Breadcrumb, NavigationService} from '../../services/navigation.service';
     templateUrl: './navigation.component.html',
     styleUrls: ['./navigation.component.scss']
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent {
     breadcrumbs: Breadcrumb[];
 
     constructor(private navigationService: NavigationService) {
         this.navigationService.breadcrumbItems.subscribe(items => {
             this.breadcrumbs = items;
         });
-    }
-
-    ngOnInit() {
     }
 }
