@@ -13,6 +13,7 @@ import {PinboardLinksComponent} from './components/pinboard-links/pinboard-links
 import {NavigationComponent} from './components/navigation/navigation.component';
 import {MechanicalWatchesAccuracyComponent} from './components/projects/watches/mechanical-watches-accuracy/mechanical-watches-accuracy.component';
 import {NavigationService} from './services/navigation.service';
+import {TheCuratedFeedComponent} from './components/projects/the-curated-feed/the-curated-feed.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +25,8 @@ import {NavigationService} from './services/navigation.service';
         FadeInDirective,
         PinboardLinksComponent,
         NavigationComponent,
-        MechanicalWatchesAccuracyComponent
+        MechanicalWatchesAccuracyComponent,
+        TheCuratedFeedComponent
     ],
     imports: [
         BrowserModule,

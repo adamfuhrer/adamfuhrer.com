@@ -20,6 +20,10 @@
                 transition: $transition-normal;
                 color: $oil;
 
+                + .project-name {
+                    margin-top: 30px;
+                }
+
                 svg {
                     width: 24px;
                     min-width: 24px;
@@ -33,7 +37,7 @@
 
                 &.link {
                     &:hover, &:focus {
-                        color: $teal;
+                        color: $orange;
                         cursor: pointer;
                         transition: $transition-normal;
 

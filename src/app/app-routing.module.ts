@@ -5,13 +5,15 @@ import {ProjectsComponent} from './components/projects/projects.component';
 import {SeikoFiveComponent} from './components/projects/watches/seiko-five/seiko-five.component';
 import {RolexSubmarinerComponent} from './components/projects/watches/rolex-submariner/rolex-submariner.component';
 import {MechanicalWatchesAccuracyComponent} from './components/projects/watches/mechanical-watches-accuracy/mechanical-watches-accuracy.component';
+import {TheCuratedFeedComponent} from './components/projects/the-curated-feed/the-curated-feed.component';
 
 const routes: Routes = [
     {path: '', component: HomepageComponent},
     {path: 'projects', component: ProjectsComponent},
     {path: 'projects/accuracy-of-mechanical-watches', component: MechanicalWatchesAccuracyComponent},
     {path: 'projects/accuracy-of-mechanical-watches/seiko-5-sports', component: SeikoFiveComponent},
-    {path: 'projects/accuracy-of-mechanical-watches/rolex-submariner', component: RolexSubmarinerComponent}
+    {path: 'projects/accuracy-of-mechanical-watches/rolex-submariner', component: RolexSubmarinerComponent},
+    {path: 'projects/the-curated-feed', component: TheCuratedFeedComponent},
 ];
 
 @NgModule({
