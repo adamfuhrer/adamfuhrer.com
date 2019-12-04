@@ -21,7 +21,7 @@ $head-shot-image-width: 190px;
             width: 100%;
             max-width: 680px;
             box-shadow: $box-shadow-strong;
-            border: 1px solid #20a084;
+            border: 1px solid #20A084;
 
             .profile {
                 display: flex;
@@ -108,7 +108,7 @@ $head-shot-image-width: 190px;
                 width: 100%;
                 max-width: 260px;
                 height: 54px;
-                background: rgba(255, 255, 255, 0.9);
+                background: rgba(255, 255, 255, 0.94);
                 color: $green;
                 border-radius: 8px;
                 box-shadow: $box-shadow-strong;
@@ -118,7 +118,7 @@ $head-shot-image-width: 190px;
                 transition: $transition-normal;
 
                 &:hover, &:focus {
-                    background: rgba(255, 255, 255, 0.98);
+                    background: rgba(255, 255, 255, 1);
                     transition: $transition-normal;
                     transform: translateY(-4px);
                 }
