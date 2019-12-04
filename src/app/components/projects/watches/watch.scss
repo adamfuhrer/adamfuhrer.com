@@ -33,7 +33,7 @@
                 }
 
                 .text {
-                    color: $orange;
+                    color: $oil;
                 }
             }
         }
@@ -69,10 +69,6 @@
                     .value {
                         font-weight: $medium;
                         color: $oil;
-
-                        &.precision {
-                            color: $orange;
-                        }
                     }
                 }
             }
@@ -163,15 +159,14 @@
                     display: flex;
                     color: $oil;
                     font-size: 1.6rem;
+                    font-weight: $regular;
 
                     .label {
-                        font-weight: $medium;
+                        color: $grey;
                     }
 
                     .text {
                         margin-left: 6px;
-                        color: $orange;
-                        font-weight: $medium;
                     }
                 }
             }
@@ -199,7 +194,7 @@
 
             .result {
                 font-size: 2.4rem;
-                color: $orange;
+                color: $oil;
                 font-weight: $semi-bold;
 
                 + .result {

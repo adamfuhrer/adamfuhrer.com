@@ -61,22 +61,20 @@
                 display: flex;
                 flex-direction: column;
                 margin-right: 150px;
+                font-size: 1.6rem;
 
                 .model {
                     font-weight: $regular;
                     margin-bottom: 24px;
-                    font-size: 1.6rem;
-                    color: #666666;
+                    color: $oil;
                 }
 
                 .label {
-                    font-size: 1.6rem;
+                    color: #666666;
                 }
 
                 .precision {
-                    color: $orange;
                     font-weight: $medium;
-                    font-size: 1.6rem;
                 }
             }
 
