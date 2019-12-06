@@ -24,6 +24,20 @@
                     margin-top: 30px;
                 }
 
+                &:focus {
+                    outline: none;
+                }
+
+                &:hover, &:focus {
+                    color: $orange;
+                    cursor: pointer;
+                    transition: $transition-normal;
+
+                    svg {
+                        margin-left: 22px;
+                    }
+                }
+
                 svg {
                     width: 24px;
                     min-width: 24px;
@@ -34,26 +48,16 @@
                         fill: $oil;
                     }
                 }
-
-                &.link {
-                    &:hover, &:focus {
-                        color: $orange;
-                        cursor: pointer;
-                        transition: $transition-normal;
-
-                        svg {
-                            margin-left: 22px;
-                        }
-                    }
-
-                    &:focus {
-                        outline: none;
-                    }
-                }
             }
+        }
+    }
 
-            .coming-soon {
-                margin-bottom: 14px;
+    @media screen and (max-width: 880px) {
+        .project-name {
+            width: 100%;
+
+            .text-wrapper {
+                width: 100%;
             }
         }
     }
