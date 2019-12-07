@@ -25,11 +25,6 @@ export class RolexSubmarinerComponent implements OnInit {
                 isActive: false
             } as Breadcrumb,
             {
-                text: 'PROJECTS',
-                routerLink: '/projects',
-                isActive: false
-            } as Breadcrumb,
-            {
                 text: 'WATCH ACCURACY',
                 routerLink: '/projects/accuracy-of-mechanical-watches',
                 isActive: false

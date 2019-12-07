@@ -1,5 +1,5 @@
 @import '../../../styles/vars';
-$head-shot-image-width: 190px;
+$head-shot-image-width: 180px;
 $swing-degrees: 5deg;
 
 @keyframes swing {
@@ -39,9 +39,10 @@ $swing-degrees: 5deg;
     .content-wrapper {
         position: relative;
         display: flex;
+        flex-direction: column;
         width: 100%;
-        justify-content: center;
-        margin-top: 20px;
+        align-items: center;
+        margin-top: 10px;
 
         .thumbtack {
             position: absolute;
@@ -59,7 +60,8 @@ $swing-degrees: 5deg;
             display: flex;
             justify-content: center;
             position: relative;
-            transform-origin: center -60px;
+            width: 100%;
+            transform-origin: center -90px;
 
             .hanger {
                 position: absolute;
@@ -129,7 +131,7 @@ $swing-degrees: 5deg;
                 .profile {
                     display: flex;
                     align-items: center;
-                    margin-bottom: 50px;
+                    margin-bottom: 14px;
 
                     img.headshot {
                         width: $head-shot-image-width;
@@ -208,23 +210,82 @@ $swing-degrees: 5deg;
                     }
                 }
 
-                .projects {
-                    width: 100%;
-                    max-width: 260px;
-                    height: 54px;
-                    background: rgba(255, 255, 255, 0.94);
-                    color: #20977E;
-                    border-radius: 8px;
-                    box-shadow: $box-shadow-strong;
-                    font-weight: $semi-bold;
-                    font-size: 1.8rem;
-                    letter-spacing: 0.6px;
+                //.projects {
+                //    width: 100%;
+                //    max-width: 260px;
+                //    height: 54px;
+                //    background: rgba(255, 255, 255, 0.94);
+                //    color: #20977E;
+                //    border-radius: 8px;
+                //    box-shadow: $box-shadow-strong;
+                //    font-weight: $semi-bold;
+                //    font-size: 1.8rem;
+                //    letter-spacing: 0.6px;
+                //    transition: $transition-normal;
+                //
+                //    &:hover, &:focus {
+                //        background: rgba(255, 255, 255, 1);
+                //        transition: $transition-normal;
+                //        transform: translateY(-4px);
+                //    }
+                //}
+            }
+        }
+
+        section.bio {
+            max-width: 640px;
+            margin-top: 60px;
+            font-size: 2rem;
+            color: $oil;
+        }
+
+        section.projects {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 480px;
+            margin-top: 40px;
+            border-left: 2px solid #e5e5e5;
+            border-right: 2px solid #e5e5e5;
+            padding: 14px 30px;
+
+            .heading {
+                margin-bottom: 14px;
+            }
+
+            .project-name {
+                display: inline-flex;
+                align-items: center;
+                transition: $transition-normal;
+                color: #444444;
+                font-style: normal;
+
+                + .project-name {
+                    margin-top: 10px;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+
+                &:hover, &:focus {
+                    color: $orange;
+                    cursor: pointer;
                     transition: $transition-normal;
 
-                    &:hover, &:focus {
-                        background: rgba(255, 255, 255, 1);
-                        transition: $transition-normal;
-                        transform: translateY(-4px);
+                    svg {
+                        margin-left: 20px;
+                    }
+                }
+
+                svg {
+                    width: 20px;
+                    min-width: 20px;
+                    margin-left: 14px;
+                    transition: $transition-normal;
+
+                    path {
+                        fill: $grey;
                     }
                 }
             }
@@ -236,8 +297,8 @@ $swing-degrees: 5deg;
         align-items: center;
         justify-content: center;
         position: fixed;
-        bottom: 24px;
-        left: calc(50% - 20px); // 20px is half button width
+        top: 14px;
+        right: 14px;
         width: 40px;
         height: 40px;
         background: $off-white;
@@ -276,7 +337,7 @@ $swing-degrees: 5deg;
 
             .card-wrapper {
                 width: 100%;
-                max-width: 460px;
+                max-width: 500px;
 
                 .hanger {
                     display: none;
@@ -291,7 +352,7 @@ $swing-degrees: 5deg;
 
                     .profile {
                         flex-direction: column;
-                        margin-bottom: 30px;
+                        margin-bottom: 10px;
 
                         img.headshot {
                             margin-bottom: 20px;
@@ -319,7 +380,23 @@ $swing-degrees: 5deg;
                         max-width: 100%;
                     }
                 }
+            }
 
+            section.projects {
+                margin-top: 30px;
+
+                .project-name {
+                    width: 100%;
+
+                    .text-wrapper {
+                        width: 100%;
+                    }
+                }
+            }
+
+            section.bio {
+                max-width: 500px;
+                margin-top: 30px;
             }
         }
 

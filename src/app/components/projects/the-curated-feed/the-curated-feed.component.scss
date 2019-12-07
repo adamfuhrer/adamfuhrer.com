@@ -18,7 +18,7 @@
         .link {
             color: #E68C0F;
             border: 1px solid #E68C0F;
-            background: rgba(230, 140, 15, 0.08);
+            background: rgba(230, 140, 15, 0.06);
             margin-bottom: 30px;
             font-size: 1.6rem;
             padding: 4px 10px;
@@ -27,13 +27,14 @@
             transition: $transition-normal;
 
             &:hover, &:focus {
-                background: rgba(230, 140, 15, 0.14);
+                background: rgba(230, 140, 15, 0.10);
                 transition: $transition-normal;
             }
         }
 
         .description {
             margin-bottom: 40px;
+            font-size: 1.6rem;
         }
 
         img {

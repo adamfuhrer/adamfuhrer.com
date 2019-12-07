@@ -22,11 +22,6 @@ export class TheCuratedFeedComponent implements OnInit {
                 isActive: false
             } as Breadcrumb,
             {
-                text: 'PROJECTS',
-                routerLink: '/projects',
-                isActive: false
-            } as Breadcrumb,
-            {
                 text: 'THE CURATED FEED',
                 routerLink: '/projects/the-curated-feed',
                 isActive: true
