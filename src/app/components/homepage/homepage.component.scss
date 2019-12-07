@@ -42,7 +42,6 @@ $swing-degrees: 5deg;
         flex-direction: column;
         width: 100%;
         align-items: center;
-        margin-top: 10px;
 
         .thumbtack {
             position: absolute;
@@ -131,7 +130,7 @@ $swing-degrees: 5deg;
                 .profile {
                     display: flex;
                     align-items: center;
-                    margin-bottom: 14px;
+                    margin-bottom: 10px;
 
                     img.headshot {
                         width: $head-shot-image-width;
@@ -151,7 +150,7 @@ $swing-degrees: 5deg;
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
-                            margin-bottom: 24px;
+                            margin-bottom: 30px;
 
                             .name {
                                 font-family: 'Amaranth', sans-serif;
@@ -167,6 +166,7 @@ $swing-degrees: 5deg;
                                 font-weight: $light;
                                 font-style: italic;
                                 color: $white;
+                                line-height: 1;
                             }
                         }
 
@@ -182,11 +182,12 @@ $swing-degrees: 5deg;
                                     margin-top: 10px;
                                 }
 
-                                img {
+                                img, svg {
                                     width: 22px;
                                     height: 22px;
                                     min-width: 22px;
                                     margin-right: 10px;
+                                    fill: $oil;
                                 }
 
                                 .text {
@@ -311,7 +312,7 @@ $swing-degrees: 5deg;
         }
 
         svg {
-            width: 22px;
+            width: 20px;
             fill: #555555;
             transition: $transition-normal;
         }
@@ -349,7 +350,6 @@ $swing-degrees: 5deg;
 
                     .profile {
                         flex-direction: column;
-                        margin-bottom: 10px;
 
                         img.headshot {
                             margin-bottom: 20px;
@@ -363,7 +363,7 @@ $swing-degrees: 5deg;
                             .name-wrapper {
                                 height: 100%;
                                 align-items: center;
-                                margin-bottom: 20px;
+                                margin-bottom: 30px;
 
                                 .name {
                                     font-size: 4.2rem;
