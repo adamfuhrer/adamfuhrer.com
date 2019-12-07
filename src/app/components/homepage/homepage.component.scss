@@ -97,7 +97,7 @@ $swing-degrees: 5deg;
                 border-radius: 15px;
                 padding: 50px;
                 width: 100%;
-                max-width: 680px;
+                max-width: 660px;
                 box-shadow: $box-shadow-strong;
                 z-index: 1;
                 background: linear-gradient(150deg, $green, hsla(167, 65%, 42%, 1), hsla(167, 65%, 34%, 1));
@@ -245,8 +245,8 @@ $swing-degrees: 5deg;
             width: 100%;
             max-width: 480px;
             margin-top: 40px;
-            border-left: 2px solid #e5e5e5;
-            border-right: 2px solid #e5e5e5;
+            border-left: 2px solid #ececec;
+            border-right: 2px solid #ececec;
             padding: 14px 30px;
 
             .heading {
