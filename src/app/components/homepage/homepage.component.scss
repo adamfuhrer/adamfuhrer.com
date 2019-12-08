@@ -1,6 +1,6 @@
 @import '../../../styles/vars';
 $head-shot-image-width: 150px;
-$swing-degrees: 5deg;
+$swing-degrees: 6deg;
 
 @keyframes swing {
     0% {
@@ -52,7 +52,8 @@ $swing-degrees: 5deg;
             height: 16px;
             background: $orange;
             border-radius: 50%;
-            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2);
+            border: 1px solid #d2800e;
             z-index: 1;
         }
 
@@ -206,8 +207,9 @@ $swing-degrees: 5deg;
         section.bio {
             max-width: 600px;
             margin-top: 60px;
-            font-size: 2rem;
-            color: #444444;
+            font-size: 2.2rem;
+            color: $black;
+            font-weight: $light;
         }
 
         section.projects {
