@@ -1,5 +1,5 @@
 @import '../../../styles/vars';
-$head-shot-image-width: 180px;
+$head-shot-image-width: 150px;
 $swing-degrees: 5deg;
 
 @keyframes swing {
@@ -73,7 +73,6 @@ $swing-degrees: 5deg;
                     width: 300px;
                     height: 3px;
                     background: $light-grey;
-                    z-index: -1;
 
                     &.left {
                         right: -14px;
@@ -94,9 +93,9 @@ $swing-degrees: 5deg;
                 align-items: center;
                 background: $green;
                 border-radius: 15px;
-                padding: 50px;
+                padding: 40px 30px;
                 width: 100%;
-                max-width: 660px;
+                max-width: 600px;
                 box-shadow: $box-shadow-strong;
                 z-index: 1;
                 background: linear-gradient(150deg, $green, hsla(167, 65%, 42%, 1), hsla(167, 65%, 34%, 1));
@@ -111,9 +110,7 @@ $swing-degrees: 5deg;
                     width: 40px;
                     height: 40px;
                     border-radius: 50%;
-                    background: rgba(255, 255, 255, 0.2);
                     transition: $transition-normal;
-                    border: 1px solid rgba(255, 255, 255, 0.6);
 
                     img {
                         width: 22px;
@@ -123,14 +120,13 @@ $swing-degrees: 5deg;
 
                     &:hover, &:focus {
                         transition: $transition-normal;
-                        background: rgba(255, 255, 255, 0.3);
+                        background: rgba(255, 255, 255, 0.2);
                     }
                 }
 
                 .profile {
                     display: flex;
                     align-items: center;
-                    margin-bottom: 10px;
 
                     img.headshot {
                         width: $head-shot-image-width;
@@ -150,7 +146,7 @@ $swing-degrees: 5deg;
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
-                            margin-bottom: 30px;
+                            margin-bottom: 20px;
 
                             .name {
                                 font-family: 'Amaranth', sans-serif;
@@ -172,69 +168,42 @@ $swing-degrees: 5deg;
 
                         .links-wrapper {
                             display: flex;
-                            flex-direction: column;
+                            flex-direction: row;
 
                             .link {
                                 display: flex;
                                 align-items: center;
+                                justify-content: center;
+                                width: 60px;
+                                height: 60px;
+                                background: rgba(255, 255, 255, 0.2);
+                                border-radius: 50%;
+                                transition: $transition-normal;
 
                                 + .link {
-                                    margin-top: 10px;
+                                    margin-left: 10px;
                                 }
 
-                                img, svg {
-                                    width: 22px;
-                                    height: 22px;
-                                    min-width: 22px;
-                                    margin-right: 10px;
-                                    fill: $oil;
+                                &:hover, &:focus {
+                                    transition: $transition-normal;
+                                    background: rgba(255, 255, 255, 0.3);
                                 }
 
-                                .text {
-                                    font-size: 1.6rem;
-                                    color: $white;
-                                    font-weight: $semi-bold;
-
-                                    a {
-                                        color: $white;
-                                        padding: 3px 5px;
-                                        border-radius: 5px;
-                                        background: rgba(255, 255, 255, 0.2);
-
-                                        &:hover, &:focus {
-                                            background: rgba(255, 255, 255, 0.3);
-                                        }
-                                    }
+                                svg {
+                                    width: 28px;
+                                    height: 28px;
+                                    min-width: 28px;
+                                    fill: $white;
                                 }
                             }
                         }
                     }
                 }
-
-                //.projects {
-                //    width: 100%;
-                //    max-width: 260px;
-                //    height: 54px;
-                //    background: rgba(255, 255, 255, 0.94);
-                //    color: #20977E;
-                //    border-radius: 8px;
-                //    box-shadow: $box-shadow-strong;
-                //    font-weight: $semi-bold;
-                //    font-size: 1.8rem;
-                //    letter-spacing: 0.6px;
-                //    transition: $transition-normal;
-                //
-                //    &:hover, &:focus {
-                //        background: rgba(255, 255, 255, 1);
-                //        transition: $transition-normal;
-                //        transform: translateY(-4px);
-                //    }
-                //}
             }
         }
 
         section.bio {
-            max-width: 640px;
+            max-width: 600px;
             margin-top: 60px;
             font-size: 2rem;
             color: #444444;
@@ -259,7 +228,7 @@ $swing-degrees: 5deg;
                 font-style: normal;
 
                 + .project-name {
-                    margin-top: 10px;
+                    margin-top: 14px;
                 }
 
                 &:focus {
@@ -297,19 +266,13 @@ $swing-degrees: 5deg;
         position: fixed;
         top: 14px;
         right: 14px;
-        width: 40px;
-        height: 40px;
+        width: 34px;
+        height: 34px;
         background: $off-white;
         border-radius: 5px;
         border: 1px solid $light-grey;
         box-shadow: $box-shadow-weak;
         transition: $transition-normal;
-
-        a {
-            width: 40px;
-            height: 40px;
-            padding-bottom: 2px;
-        }
 
         svg {
             width: 20px;
@@ -369,6 +332,10 @@ $swing-degrees: 5deg;
                                     font-size: 4.2rem;
                                     text-align: center;
                                 }
+                            }
+
+                            .links-wrapper {
+                                justify-content: center;
                             }
                         }
                     }
