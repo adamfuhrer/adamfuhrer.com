@@ -100,7 +100,8 @@ $swing-degrees: 5deg;
                 max-width: 600px;
                 box-shadow: $box-shadow-strong;
                 z-index: 1;
-                background: linear-gradient(150deg, $green, hsla(167, 65%, 42%, 1), hsla(167, 65%, 34%, 1));
+                //background: linear-gradient(150deg, $green, hsla(167, 65%, 42%, 1), hsla(167, 65%, 34%, 1));
+                background: linear-gradient(150deg, lighten($green, 1%), darken($green, 2%), darken($green, 8%));
 
                 button.ghost {
                     position: absolute;
@@ -136,7 +137,7 @@ $swing-degrees: 5deg;
                         min-width: $head-shot-image-width;
                         margin-right: 40px;
                         border-radius: 50%;
-                        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.26);
+                        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.16);
                     }
 
                     .right-content {
@@ -157,6 +158,7 @@ $swing-degrees: 5deg;
                                 color: $white;
                                 letter-spacing: 2px;
                                 line-height: 1;
+                                margin-top: 4px;
                             }
 
                             .title {
@@ -216,12 +218,12 @@ $swing-degrees: 5deg;
             display: flex;
             flex-direction: column;
             width: 100%;
-            max-width: 460px;
+            max-width: 400px;
             margin-top: 40px;
-            padding: 20px 30px;
-            border: 1px solid #E5E5E5;
+            //padding: 20px 30px;
+            //border: 1px solid #E5E5E5;
             border-radius: 10px;
-            background: $off-white;
+            //background: $off-white;
 
             .project-name {
                 display: inline-flex;
