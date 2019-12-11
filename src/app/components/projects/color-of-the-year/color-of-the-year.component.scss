@@ -1,0 +1,110 @@
+@import '../../../../styles/vars';
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+        background: $green;
+        border-radius: 50%;
+        z-index: 1;
+        box-shadow: $box-shadow-strong;
+        transition: $transition-normal;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+
+        svg {
+            width: 28px;
+            height: 28px;
+            fill: #FFFFFF;
+        }
+
+        &:hover {
+            transition: $transition-normal;
+            transform: translateY(-4px);
+            background: lighten($green, 4%);
+        }
+    }
+
+    .page-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: $content-width;
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        .swatches-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .swatches-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777777;
+            font-weight: $regular;
+            font-style: italic;
+            height: 20px;
+            font-size: 1.6rem;
+            margin-bottom: 50px;
+
+            img {
+                width: 18px;
+                height: 18px;
+                margin-right: 6px;
+            }
+        }
+
+        .description {
+            margin-bottom: 50px;
+        }
+
+        app-color-swatch-large {
+            img {
+                height: auto;
+                max-width: 25%;
+                position: relative;
+
+                &.large {
+                    max-width: 50%;
+                }
+
+                + img {
+                    margin-left: 4px;
+                }
+            }
+
+            + app-color-swatch-large {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 880px) {
+        .page-wrapper {
+            .description {
+                margin-bottom: 30px;
+            }
+
+            app-color-swatch-large {
+                + app-color-swatch-large {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

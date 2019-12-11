@@ -1,0 +1,136 @@
+<button class="back-to-top" title="Back to top" (click)="onScrollToTopClick()">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="7.7 10.1 11 6.8 11 17 11 21 13 21 13 17 13 6.8 16.2 10 17.6 8.6 13.4 4.4 12 3 10.6 4.4 6.3 8.7"/>
+    </svg>
+</button>
+<div class="page-wrapper" fadeIn>
+    <h1>Visualizing 20 Years of Pantone’s Color of the Year (2020-2000)</h1>
+    <div class="swatches-wrapper">
+        <app-color-swatch *ngFor="let color of colorSwatches"
+                          [color]="color.color"
+                          [secondColor]="color.secondColor"
+                          [year]="color.year">
+        </app-color-swatch>
+    </div>
+    <div class="swatches-text">
+<!--        <img src="assets/images/emojis/pointing-up.png" alt="Pointing up emoji">-->
+        <span>Click a color to scroll to it's swatch</span>
+    </div>
+    <div class="description">
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+            a type specimen book.
+        </p>
+        <p>
+            To commemorate 20 years of Pantone ….. Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer
+            took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+            but also the leap into
+        </p>
+    </div>
+    <app-color-swatch-large name="Classic Blue"
+                            pantone="Pantone 19-4052"
+                            hex="#0F4C81"
+                            year="2020"
+                            id="2020"
+                            link="https://store.pantone.com/uk/en/color-of-the-year-2020/"
+                            [imageSources]="['https://www.behance.net/thisset',
+                                             'https://cargocollective.com/fitzkrueger',
+                                              'http://www.jeongmeeyoon.com/']">
+        <img class="large" src="assets/images/pantone/2020-01.jpg" alt="thisset">
+        <img src="assets/images/pantone/2020-02.jpg" alt="Photographer Fitz Krueger">
+        <img src="assets/images/pantone/2020-03.jpg" alt="Jeongmee Yoon The Pink and Blue Project Photography">
+    </app-color-swatch-large>
+
+    <app-color-swatch-large name="Living Coral"
+                            pantone="Pantone 16-1546"
+                            hex="#FF6F61"
+                            year="2019"
+                            id="2019"
+                            link="https://store.pantone.com/uk/en/color-of-the-year-2019/"
+                            [imageSources]="['http://www.annpibal.com/', 'https://breathethisis.tumblr.com/post/169489427674', 'http://www.leonardoworx.com/']">
+        <img src="assets/images/pantone/2019-03.jpg" alt="Ann Pibal painting">
+        <img class="large" src="assets/images/pantone/2019-02.jpg" alt="breathethisis">
+        <img src="assets/images/pantone/2019-01.jpg" alt="Leonardo Worx artist">
+    </app-color-swatch-large>
+
+    <app-color-swatch-large name="Ultra Violet"
+                            pantone="Pantone 18-3838"
+                            hex="#5F4B8B"
+                            year="2018"
+                            id="2018"
+                            link="https://store.pantone.com/uk/en/color-of-the-year-2018/"
+                            [imageSources]="['https://akfaoro.com/', 'http://www.davidmaxrothenberg.com/', 'http://notwo.org/']">
+        <img src="assets/images/pantone/2018-01.jpg" alt="Alyssa Katherine Faoro photography">
+        <img src="assets/images/pantone/2018-02.jpg" alt="David Rothenberg photography">
+        <img class="large" src="assets/images/pantone/2018-03.jpg" alt="Tamas Horvath photography">
+    </app-color-swatch-large>
+
+    <app-color-swatch-large name="Greenery"
+                            pantone="Pantone 15-0343"
+                            hex="#88B04B"
+                            year="2017"
+                            id="2017"
+                            link="https://store.pantone.com/uk/en/color-of-the-year-2017/"
+                            [imageSources]="['http://www.palast.fr/', 'http://nicolakloosterman.com/', '']">
+        <img src="assets/images/pantone/2017-01.jpg" alt="Julien Palast art">
+        <img src="assets/images/pantone/2017-02.jpg" alt="Nicola Kloosterman collage">
+    </app-color-swatch-large>
+
+    <app-color-swatch-large name="Serenity"
+                            pantone="Pantone 15-3913"
+                            hex="#92A8D1"
+                            year="2016"
+                            id="2016"
+                            link="https://store.pantone.com/uk/en/rose-quartz-serenity-2016-color-of-the-year/"
+                            [imageSources]="['', 'https://marklovejoydotcom.tumblr.com/', 'https://www.gkm.se/yrjo-edelmann/']">
+        <img src="assets/images/pantone/2016-02.jpg" alt="Yrjo Edelmann art">
+        <img class="large" src="assets/images/pantone/2016-01.jpg" alt="Mark Lovejoy art">
+    </app-color-swatch-large>
+
+    <app-color-swatch-large name="Marsala"
+                            pantone="Pantone 18-1438"
+                            hex="#955251"
+                            year="2015"
+                            id="2015"
+                            link="https://store.pantone.com/uk/en/marsala-2015-color-of-the-year/"
+                            [imageSources]="['', '', '']">
+    </app-color-swatch-large>
+
+    <app-color-swatch-large name="Radiant Orchid"
+                            pantone="Pantone 18-3224"
+                            hex="#B163A3"
+                            year="2014"
+                            id="2014"
+                            link="https://store.pantone.com/uk/en/radiant-orchid-2014-color-of-the-year/"
+                            [imageSources]="['', '', '']">
+    </app-color-swatch-large>
+
+    <app-color-swatch-large name="Emerald"
+                            pantone="Pantone 17-5641"
+                            hex="#009473"
+                            year="2013"
+                            id="2013"
+                            link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2013"
+                            [imageSources]="['', '', '']">
+    </app-color-swatch-large>
+
+    <app-color-swatch-large name="Tangerine Tango"
+                            pantone="Pantone 17-1463"
+                            hex="#DD4124"
+                            year="2012"
+                            id="2012"
+                            link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2012"
+                            [imageSources]="['', '', '']">
+    </app-color-swatch-large>
+
+    <app-color-swatch-large name="Honeysuckle"
+                            pantone="Pantone 18-2120"
+                            hex="#D94F70"
+                            year="2011"
+                            id="2011"
+                            link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2011"
+                            [imageSources]="['', '', '']">
+    </app-color-swatch-large>
+</div>
