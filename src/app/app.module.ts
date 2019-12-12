@@ -17,6 +17,10 @@ import {ColorOfTheYearComponent} from './components/projects/color-of-the-year/c
 import {ColorSwatchComponent} from './components/projects/color-of-the-year/color-swatch/color-swatch.component';
 import {ColorSwatchLargeComponent} from './components/projects/color-of-the-year/color-swatch-large/color-swatch-large.component';
 
+// Material
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import 'hammerjs';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -35,12 +39,13 @@ import {ColorSwatchLargeComponent} from './components/projects/color-of-the-year
     imports: [
         BrowserModule,
         AppRoutingModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        MatSlideToggleModule
     ],
     providers: [
         NavigationService
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
 })
 export class AppModule {
 }

@@ -1,11 +1,16 @@
 <div class="card-wrapper">
-    <div class="top-bar" [style.background]="hex">
+    <div *ngIf="!isHidingColorBar" class="top-bar" [style.background]="hex">
         <div class="left">
             <div class="name">{{name}}</div>
             <div class="pantone">{{pantone}}</div>
             <div class="hex">{{hex}}</div>
         </div>
-        <div class="right">
+        <div class="right" [style.background]="hexSecond ? hexSecond : ''">
+            <div *ngIf="nameSecond">
+                <div class="name">{{nameSecond}}</div>
+                <div class="pantone">{{pantoneSecond}}</div>
+                <div class="hex">{{hexSecond}}</div>
+            </div>
             <div class="year">{{year}}</div>
             <div class="links" [style.justify-content]="link ? 'space-between' : 'center'">
                 <div class="top" *ngIf="link">
@@ -25,6 +30,7 @@
         </div>
     </div>
     <div class="images">
+        <div *ngIf="isHidingColorBar" class="year">{{year}}</div>
         <ng-content></ng-content>
     </div>
 </div>

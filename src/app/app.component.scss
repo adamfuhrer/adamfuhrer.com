@@ -4,7 +4,7 @@
     display: block;
     padding: 80px 40px 180px 40px;
 
-    @media screen and (max-width: 880px) {
+    @media screen and (max-width: $breakpoint-medium) {
         padding: 40px 20px 100px 20px;
     }
 }

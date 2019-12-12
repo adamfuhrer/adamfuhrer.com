@@ -34,250 +34,280 @@
             website (on desktop).
         </p>
     </div>
-    <app-color-swatch-large name="Classic Blue"
-                            pantone="Pantone 19-4052"
-                            hex="#0F4C81"
-                            year="2020"
-                            id="2020"
-                            link="https://store.pantone.com/uk/en/color-of-the-year-2020/"
-                            [imageSources]="['https://www.behance.net/thisset',
-                                             'https://cargocollective.com/fitzkrueger',
-                                              'http://www.jeongmeeyoon.com/']">
-        <img class="large" src="assets/images/pantone/2020-01.jpg" alt="thisset">
-        <img src="assets/images/pantone/2020-02.jpg" alt="Photographer Fitz Krueger">
-        <img src="assets/images/pantone/2020-03.jpg" alt="Jeongmee Yoon The Pink and Blue Project Photography">
-    </app-color-swatch-large>
+    <div class="toggle-wrapper">
+        <mat-slide-toggle [checked]="isHidingColorBar" color="accent" (change)="onShowColorsToggleChange($event)">
+            Hide color bars
+        </mat-slide-toggle>
+    </div>
 
-    <app-color-swatch-large name="Living Coral"
-                            pantone="Pantone 16-1546"
-                            hex="#FF6F61"
-                            year="2019"
-                            id="2019"
-                            link="https://store.pantone.com/uk/en/color-of-the-year-2019/"
-                            [imageSources]="['https://www.jenmann.com/', 'https://www.simondavidson.com.au/', 'http://www.leonardoworx.com/']">
-        <img src="assets/images/pantone/2019-03.jpg" alt="Jen Mann painting">
-        <img class="large" src="assets/images/pantone/2019-02.jpg" alt="Simon Davidson photography">
-        <img src="assets/images/pantone/2019-01.jpg" alt="Leonardo Worx artist">
-    </app-color-swatch-large>
+    <div class="palette-wrapper" [fadeIn]="isHidingColorBar" fadeDuration="1600ms">
+        <app-color-swatch-large name="Classic Blue"
+                                pantone="Pantone 19-4052"
+                                hex="#0F4C81"
+                                year="2020"
+                                id="2020"
+                                link="https://store.pantone.com/uk/en/color-of-the-year-2020/"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="['https://www.behance.net/thisset', 'https://cargocollective.com/fitzkrueger', 'http://www.jeongmeeyoon.com/']">
+            <img class="large" src="assets/images/pantone/2020-01.jpg" alt="thisset">
+            <img src="assets/images/pantone/2020-02.jpg" alt="Photographer Fitz Krueger">
+            <img src="assets/images/pantone/2020-03.jpg" alt="Jeongmee Yoon The Pink and Blue Project Photography">
+        </app-color-swatch-large>
 
-    <app-color-swatch-large name="Ultra Violet"
-                            pantone="Pantone 18-3838"
-                            hex="#5F4B8B"
-                            year="2018"
-                            id="2018"
-                            link="https://store.pantone.com/uk/en/color-of-the-year-2018/"
-                            [imageSources]="['https://akfaoro.com/', 'https://www.valentin-fougeray.com/', 'http://notwo.org/']">
-        <img src="assets/images/pantone/2018-01.jpg" alt="Alyssa Katherine Faoro photography">
-        <img src="assets/images/pantone/2018-02.jpg" alt="Valentin Fougeray photography">
-        <img class="large" src="assets/images/pantone/2018-03.jpg" alt="Tamas Horvath photography">
-    </app-color-swatch-large>
+        <app-color-swatch-large name="Living Coral"
+                                pantone="Pantone 16-1546"
+                                hex="#FF6F61"
+                                year="2019"
+                                id="2019"
+                                link="https://store.pantone.com/uk/en/color-of-the-year-2019/"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="['https://www.jenmann.com/', 'https://www.simondavidson.com.au/', 'http://www.leonardoworx.com/']">
+            <img src="assets/images/pantone/2019-03.jpg" alt="Jen Mann painting">
+            <img class="large" src="assets/images/pantone/2019-02.jpg" alt="Simon Davidson photography">
+            <img src="assets/images/pantone/2019-01.jpg" alt="Leonardo Worx artist">
+        </app-color-swatch-large>
 
-    <app-color-swatch-large name="Greenery"
-                            pantone="Pantone 15-0343"
-                            hex="#88B04B"
-                            year="2017"
-                            id="2017"
-                            link="https://store.pantone.com/uk/en/color-of-the-year-2017/"
-                            [imageSources]="['http://www.oliviasteele.com/', 'http://nicolakloosterman.com/', 'http://www.palast.fr/']">
-        <img class="large" src="assets/images/pantone/2017-03.jpg" alt="Olivia Steele neon art">
-        <img src="assets/images/pantone/2017-02.jpg" alt="Nicola Kloosterman collage">
-        <img src="assets/images/pantone/2017-01.jpg" alt="Julien Palast art">
-    </app-color-swatch-large>
+        <app-color-swatch-large name="Ultra Violet"
+                                pantone="Pantone 18-3838"
+                                hex="#5F4B8B"
+                                year="2018"
+                                id="2018"
+                                link="https://store.pantone.com/uk/en/color-of-the-year-2018/"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="['https://akfaoro.com/', 'https://www.valentin-fougeray.com/', 'http://notwo.org/']">
+            <img src="assets/images/pantone/2018-01.jpg" alt="Alyssa Katherine Faoro photography">
+            <img src="assets/images/pantone/2018-02.jpg" alt="Valentin Fougeray photography">
+            <img class="large" src="assets/images/pantone/2018-03.jpg" alt="Tamas Horvath photography">
+        </app-color-swatch-large>
 
-    <app-color-swatch-large name="Serenity"
-                            pantone="Pantone 15-3913"
-                            hex="#92A8D1"
-                            year="2016"
-                            id="2016"
-                            link="https://store.pantone.com/uk/en/rose-quartz-serenity-2016-color-of-the-year/"
-                            [imageSources]="['http://www.samoctigan.com/', 'https://vishalmarapon.com/', 'https://youarerockstar.tumblr.com/']">
-        <img class="large" src="assets/images/pantone/2016-01.jpg" alt="Sam Octigan painting">
-        <img src="assets/images/pantone/2016-02.jpg" alt="Vishal Marapon photography">
-        <img src="assets/images/pantone/2016-03.jpg" alt="Nicholas Mottola Jacobsen collage art">
-    </app-color-swatch-large>
+        <app-color-swatch-large name="Greenery"
+                                pantone="Pantone 15-0343"
+                                hex="#88B04B"
+                                year="2017"
+                                id="2017"
+                                link="https://store.pantone.com/uk/en/color-of-the-year-2017/"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="['http://www.oliviasteele.com/', 'http://nicolakloosterman.com/', 'http://www.palast.fr/']">
+            <img class="large" src="assets/images/pantone/2017-03.jpg" alt="Olivia Steele neon art">
+            <img src="assets/images/pantone/2017-02.jpg" alt="Nicola Kloosterman collage">
+            <img src="assets/images/pantone/2017-01.jpg" alt="Julien Palast art">
+        </app-color-swatch-large>
 
-    <app-color-swatch-large name="Marsala"
-                            pantone="Pantone 18-1438"
-                            hex="#955251"
-                            year="2015"
-                            id="2015"
-                            link="https://store.pantone.com/uk/en/marsala-2015-color-of-the-year/"
-                            [imageSources]="['http://www.vonnsumner.com/', 'https://www.diegobrambilla.com/', 'https://natashakristian.com/']">
-        <img src="assets/images/pantone/2015-01.jpg" alt="Vonn Sumner painting">
-        <img class="large" src="assets/images/pantone/2015-03.jpg" alt="Diego Brambilla photography">
-        <img src="assets/images/pantone/2015-02.jpg" alt="Natasha Kristian photography">
-    </app-color-swatch-large>
+        <app-color-swatch-large name="Serenity"
+                                pantone="Pantone 15-3913"
+                                hex="#92A8D1"
+                                nameSecond="Rose Quartz"
+                                pantoneSecond="Pantone 13-1520"
+                                hexSecond="#F7CAC9"
+                                year="2016"
+                                id="2016"
+                                link="https://store.pantone.com/uk/en/rose-quartz-serenity-2016-color-of-the-year/"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="['http://www.samoctigan.com/', 'https://vishalmarapon.com/', 'https://youarerockstar.tumblr.com/']">
+            <img class="large" src="assets/images/pantone/2016-01.jpg" alt="Sam Octigan painting">
+            <img src="assets/images/pantone/2016-02.jpg" alt="Vishal Marapon photography">
+            <img src="assets/images/pantone/2016-03.jpg" alt="Nicholas Mottola Jacobsen collage art">
+        </app-color-swatch-large>
 
-    <app-color-swatch-large name="Radiant Orchid"
-                            pantone="Pantone 18-3224"
-                            hex="#B163A3"
-                            year="2014"
-                            id="2014"
-                            link="https://store.pantone.com/uk/en/radiant-orchid-2014-color-of-the-year/"
-                            [imageSources]="['http://www.danielrich.net/','https://www.kipomolade.com/', 'http://www.kellyreemtsen.com/']">
-        <img class="large" src="assets/images/pantone/2014-01.jpg" alt="Daniel Rich painting">
-        <img src="assets/images/pantone/2014-03.jpg" alt="Kip Omolade painting">
-        <img src="assets/images/pantone/2014-02.jpg" alt="Kelly Reemsten art">
-    </app-color-swatch-large>
+        <app-color-swatch-large name="Marsala"
+                                pantone="Pantone 18-1438"
+                                hex="#955251"
+                                year="2015"
+                                id="2015"
+                                link="https://store.pantone.com/uk/en/marsala-2015-color-of-the-year/"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="['http://www.vonnsumner.com/', 'https://www.diegobrambilla.com/', 'https://natashakristian.com/']">
+            <img src="assets/images/pantone/2015-01.jpg" alt="Vonn Sumner painting">
+            <img class="large" src="assets/images/pantone/2015-03.jpg" alt="Diego Brambilla photography">
+            <img src="assets/images/pantone/2015-02.jpg" alt="Natasha Kristian photography">
+        </app-color-swatch-large>
 
-    <app-color-swatch-large name="Emerald"
-                            pantone="Pantone 17-5641"
-                            hex="#009473"
-                            year="2013"
-                            id="2013"
-                            link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2013"
-                            [imageSources]="['https://jkbfletcher.squarespace.com/', 'http://www.robertminervini.com/', 'http://www.alaynacoverly.com/']">
-        <img src="assets/images/pantone/2013-02.jpg" alt="JKB Fletcher painting">
-        <img class="large" src="assets/images/pantone/2013-01.jpg" alt="Daniel Rich painting">
-        <img src="assets/images/pantone/2013-03.jpg" alt="Alayna Coverly painting">
-    </app-color-swatch-large>
+        <app-color-swatch-large name="Radiant Orchid"
+                                pantone="Pantone 18-3224"
+                                hex="#B163A3"
+                                year="2014"
+                                id="2014"
+                                link="https://store.pantone.com/uk/en/radiant-orchid-2014-color-of-the-year/"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="['http://www.danielrich.net/','https://www.kipomolade.com/', 'http://www.kellyreemtsen.com/']">
+            <img class="large" src="assets/images/pantone/2014-01.jpg" alt="Daniel Rich painting">
+            <img src="assets/images/pantone/2014-03.jpg" alt="Kip Omolade painting">
+            <img src="assets/images/pantone/2014-02.jpg" alt="Kelly Reemsten art">
+        </app-color-swatch-large>
 
-    <app-color-swatch-large name="Tangerine Tango"
-                            pantone="Pantone 17-1463"
-                            hex="#DD4124"
-                            year="2012"
-                            id="2012"
-                            link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2012"
-                            [imageSources]="['http://yagohortal.com/', 'http://tagchristof.com/', 'https://www.instagram.com/amandajasnowskipascual/']">
-        <img class="large" src="assets/images/pantone/2012-03.jpg" alt="Yago Hortal painting">
-        <img src="assets/images/pantone/2012-02.jpg" alt="Tag Christof photography">
-        <img src="assets/images/pantone/2012-01.jpg" alt="Amanda Jasnowski photography">
-    </app-color-swatch-large>
+        <app-color-swatch-large name="Emerald"
+                                pantone="Pantone 17-5641"
+                                hex="#009473"
+                                year="2013"
+                                id="2013"
+                                link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2013"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="['https://jkbfletcher.squarespace.com/', 'http://www.robertminervini.com/', 'http://www.alaynacoverly.com/']">
+            <img src="assets/images/pantone/2013-02.jpg" alt="JKB Fletcher painting">
+            <img class="large" src="assets/images/pantone/2013-01.jpg" alt="Daniel Rich painting">
+            <img src="assets/images/pantone/2013-03.jpg" alt="Alayna Coverly painting">
+        </app-color-swatch-large>
 
-    <app-color-swatch-large name="Honeysuckle"
-                            pantone="Pantone 18-2120"
-                            hex="#D94F70"
-                            year="2011"
-                            id="2011"
-                            link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2011"
-                            [imageSources]="['https://www.instagram.com/sofles/', 'https://store.francoise-nielly.com/en/', 'http://www.lorihersberger.com/']">
-        <img src="assets/images/pantone/2011-02.jpg" alt="sofles graffiti">
-        <img class="large" src="assets/images/pantone/2011-03.jpg" alt="Francoise Nielly painting">
-        <img src="assets/images/pantone/2011-01.jpg" alt="Lori Hersberger neon art">
-    </app-color-swatch-large>
+        <app-color-swatch-large name="Tangerine Tango"
+                                pantone="Pantone 17-1463"
+                                hex="#DD4124"
+                                year="2012"
+                                id="2012"
+                                link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2012"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="['http://yagohortal.com/', 'http://tagchristof.com/', 'https://www.instagram.com/amandajasnowskipascual/']">
+            <img class="large" src="assets/images/pantone/2012-03.jpg" alt="Yago Hortal painting">
+            <img src="assets/images/pantone/2012-02.jpg" alt="Tag Christof photography">
+            <img src="assets/images/pantone/2012-01.jpg" alt="Amanda Jasnowski photography">
+        </app-color-swatch-large>
 
-    <app-color-swatch-large name="Turquoise"
-                            pantone="Pantone 15-5519"
-                            hex="#45B5AA"
-                            year="2010"
-                            id="2010"
-                            link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2010"
-                            [imageSources]="['https://www.witchoria.com/', 'https://www.izaacenciso.com/', 'https://www.instagram.com/artposer/']">
-        <img class="large" src="assets/images/pantone/2010-01.jpg" alt="Witchoria art">
-        <img src="assets/images/pantone/2010-02.jpg" alt="Izaac Enciso art">
-        <img src="assets/images/pantone/2010-03.jpg" alt="Alex Gardner painting">
-    </app-color-swatch-large>
+        <app-color-swatch-large name="Honeysuckle"
+                                pantone="Pantone 18-2120"
+                                hex="#D94F70"
+                                year="2011"
+                                id="2011"
+                                link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2011"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="['https://www.instagram.com/sofles/', 'https://store.francoise-nielly.com/en/', 'http://www.lorihersberger.com/']">
+            <img src="assets/images/pantone/2011-02.jpg" alt="sofles graffiti">
+            <img class="large" src="assets/images/pantone/2011-03.jpg" alt="Francoise Nielly painting">
+            <img src="assets/images/pantone/2011-01.jpg" alt="Lori Hersberger neon art">
+        </app-color-swatch-large>
 
-    <app-color-swatch-large name="Mimosa"
-                            pantone="Pantone 14-0848"
-                            hex="#F0C05A"
-                            year="2009"
-                            id="2009"
-                            link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2009"
-                            [imageSources]="[ 'https://loladupre.com/', 'http://www.joseparla.com/', 'https://anamontiel.com/']">
-        <img src="assets/images/pantone/2009-02.jpg" alt="Lola Dupre collage">
-        <img class="large" src="assets/images/pantone/2009-01.jpg" alt="José Parlá art">
-        <img src="assets/images/pantone/2009-03.jpg" alt="Ana Montiel art">
-    </app-color-swatch-large>
+        <app-color-swatch-large name="Turquoise"
+                                pantone="Pantone 15-5519"
+                                hex="#45B5AA"
+                                year="2010"
+                                id="2010"
+                                link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2010"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="['https://www.witchoria.com/', 'https://www.izaacenciso.com/', 'https://www.instagram.com/artposer/']">
+            <img class="large" src="assets/images/pantone/2010-01.jpg" alt="Witchoria art">
+            <img src="assets/images/pantone/2010-02.jpg" alt="Izaac Enciso art">
+            <img src="assets/images/pantone/2010-03.jpg" alt="Alex Gardner painting">
+        </app-color-swatch-large>
 
-    <app-color-swatch-large name="Blue Iris"
-                            pantone="Pantone 18-3943"
-                            hex="#5A5B9F"
-                            year="2008"
-                            id="2008"
-                            link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2008"
-                            [imageSources]="['https://www.instagram.com/sebasrivasart/', 'https://chloe-newman.com/', 'http://www.olafbreuning.com/']">
-        <img src="assets/images/pantone/2008-03.jpg" alt="sebasrivasart">
-        <img src="assets/images/pantone/2008-01.jpg" alt="Chloe Newman photography">
-        <img class="large" src="assets/images/pantone/2008-02.jpg" alt="Olaf Breuning photography">
-    </app-color-swatch-large>
+        <app-color-swatch-large name="Mimosa"
+                                pantone="Pantone 14-0848"
+                                hex="#F0C05A"
+                                year="2009"
+                                id="2009"
+                                link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2009"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="[ 'https://loladupre.com/', 'http://www.joseparla.com/', 'https://anamontiel.com/']">
+            <img src="assets/images/pantone/2009-02.jpg" alt="Lola Dupre collage">
+            <img class="large" src="assets/images/pantone/2009-01.jpg" alt="José Parlá art">
+            <img src="assets/images/pantone/2009-03.jpg" alt="Ana Montiel art">
+        </app-color-swatch-large>
 
-    <app-color-swatch-large name="Chili Pepper"
-                            pantone="Pantone 19-1557"
-                            hex="#9B1B30"
-                            year="2007"
-                            id="2007"
-                            link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2007"
-                            [imageSources]="['https://jmsanabria.com/', 'https://anastasiiachorna.com/', 'https://ollygeary.com/']">
-        <img src="assets/images/pantone/2007-01.jpg" alt="Juan Manuel Sanabria painting">
-        <img class="large" src="assets/images/pantone/2007-03.jpg" alt="Anastasiia Chorna photography">
-        <img src="assets/images/pantone/2007-02.jpg" alt="Olly Geary photography">
-    </app-color-swatch-large>
+        <app-color-swatch-large name="Blue Iris"
+                                pantone="Pantone 18-3943"
+                                hex="#5A5B9F"
+                                year="2008"
+                                id="2008"
+                                link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2008"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="['https://www.instagram.com/sebasrivasart/', 'https://chloe-newman.com/', 'http://www.olafbreuning.com/']">
+            <img src="assets/images/pantone/2008-03.jpg" alt="sebasrivasart">
+            <img src="assets/images/pantone/2008-01.jpg" alt="Chloe Newman photography">
+            <img class="large" src="assets/images/pantone/2008-02.jpg" alt="Olaf Breuning photography">
+        </app-color-swatch-large>
 
-    <app-color-swatch-large name="Sand Dollar"
-                            pantone="Pantone 13-1106"
-                            hex="#DECDBE"
-                            year="2006"
-                            id="2006"
-                            [imageSources]="['https://robertgaudette.tumblr.com/', 'https://www.luiferreyra.com/', 'https://www.racheljoanis.com/']">
-        <img src="assets/images/pantone/2006-01.jpg" alt="Robert Gaudette photography">
-        <img src="assets/images/pantone/2006-03.jpg" alt="Lui Ferreyra art">
-        <img class="large" src="assets/images/pantone/2006-02.jpg" alt="Rachel Joanis illustration">
-    </app-color-swatch-large>
+        <app-color-swatch-large name="Chili Pepper"
+                                pantone="Pantone 19-1557"
+                                hex="#9B1B30"
+                                year="2007"
+                                id="2007"
+                                link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2007"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="['https://jmsanabria.com/', 'https://anastasiiachorna.com/', 'https://ollygeary.com/']">
+            <img src="assets/images/pantone/2007-01.jpg" alt="Juan Manuel Sanabria painting">
+            <img class="large" src="assets/images/pantone/2007-03.jpg" alt="Anastasiia Chorna photography">
+            <img src="assets/images/pantone/2007-02.jpg" alt="Olly Geary photography">
+        </app-color-swatch-large>
 
-    <app-color-swatch-large name="Blue Turquoise"
-                            pantone="Pantone 15-5217"
-                            hex="#53B0AE"
-                            year="2005"
-                            id="2005"
-                            [imageSources]="['https://kimkeever.com/', 'http://martenelder.com/', 'https://www.samuelzeller.ch/']">
-        <img class="large" src="assets/images/pantone/2005-02.jpg" alt="Kim Keever photography">
-        <img src="assets/images/pantone/2005-01.jpg" alt="Marten Elder photography">
-        <img src="assets/images/pantone/2005-03.jpg" alt="Samuel Zeller photography">
-    </app-color-swatch-large>
+        <app-color-swatch-large name="Sand Dollar"
+                                pantone="Pantone 13-1106"
+                                hex="#DECDBE"
+                                year="2006"
+                                id="2006"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="['https://robertgaudette.tumblr.com/', 'https://www.luiferreyra.com/', 'http://www.dojo.electrickettle.fr/']">
+            <img src="assets/images/pantone/2006-01.jpg" alt="Robert Gaudette photography">
+            <img src="assets/images/pantone/2006-03.jpg" alt="Lui Ferreyra art">
+            <img class="large" src="assets/images/pantone/2006-02.jpg" alt="Matthieu Bourel collage">
+        </app-color-swatch-large>
 
-    <app-color-swatch-large name="Tigerlily"
-                            pantone="Pantone 17-1456"
-                            hex="#E2583E"
-                            year="2004"
-                            id="2004"
-                            [imageSources]="['https://franciscovargas.uk/','https://www.behance.net/folster', 'http://www.lisaericson.com/' ]">
-        <img src="assets/images/pantone/2004-03.jpg" alt="Franciscov Vargas photography">
-        <img src="assets/images/pantone/2004-01.jpg" alt="Henrique Folster graphic design">
-        <img class="large" src="assets/images/pantone/2004-02.jpg" alt="Lisa Ericson painting">
-    </app-color-swatch-large>
+        <app-color-swatch-large name="Blue Turquoise"
+                                pantone="Pantone 15-5217"
+                                hex="#53B0AE"
+                                year="2005"
+                                id="2005"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="['https://kimkeever.com/', 'http://martenelder.com/', 'https://www.samuelzeller.ch/']">
+            <img class="large" src="assets/images/pantone/2005-02.jpg" alt="Kim Keever photography">
+            <img src="assets/images/pantone/2005-01.jpg" alt="Marten Elder photography">
+            <img src="assets/images/pantone/2005-03.jpg" alt="Samuel Zeller photography">
+        </app-color-swatch-large>
 
-    <app-color-swatch-large name="Aqua Sky"
-                            pantone="Pantone 14-4811"
-                            hex="#7BC4C4"
-                            year="2003"
-                            id="2003"
-                            [imageSources]="['https://floraborsi.com/', 'http://spirandelli.com/', 'http://www.martinalang.co.uk/']">
-        <img class="large" src="assets/images/pantone/2003-03.jpg" alt="Flora Borsi photography">
-        <img src="assets/images/pantone/2003-02.jpg" alt="Noel Spirandelli photography">
-        <img src="assets/images/pantone/2003-01.jpg" alt="Martina Lang photography">
-    </app-color-swatch-large>
+        <app-color-swatch-large name="Tigerlily"
+                                pantone="Pantone 17-1456"
+                                hex="#E2583E"
+                                year="2004"
+                                id="2004"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="['https://franciscovargas.uk/','https://www.behance.net/folster', 'http://www.lisaericson.com/' ]">
+            <img src="assets/images/pantone/2004-03.jpg" alt="Franciscov Vargas photography">
+            <img src="assets/images/pantone/2004-01.jpg" alt="Henrique Folster graphic design">
+            <img class="large" src="assets/images/pantone/2004-02.jpg" alt="Lisa Ericson painting">
+        </app-color-swatch-large>
 
-    <app-color-swatch-large name="True Red"
-                            pantone="Pantone 19-1664"
-                            hex="#BF1932"
-                            year="2002"
-                            id="2002"
-                            [imageSources]="['http://crucamara.com/', 'https://www.alexprager.com/', 'https://www.izaacenciso.com/']">
-        <img class="large" src="assets/images/pantone/2002-01.jpg" alt="Cru Camara photography">
-        <img src="assets/images/pantone/2002-02.jpg" alt="Alex Prager photography">
-        <img src="assets/images/pantone/2002-03.jpg" alt="Izaac Enciso photography">
-    </app-color-swatch-large>
+        <app-color-swatch-large name="Aqua Sky"
+                                pantone="Pantone 14-4811"
+                                hex="#7BC4C4"
+                                year="2003"
+                                id="2003"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="['https://floraborsi.com/', 'http://spirandelli.com/', 'http://www.martinalang.co.uk/']">
+            <img class="large" src="assets/images/pantone/2003-03.jpg" alt="Flora Borsi photography">
+            <img src="assets/images/pantone/2003-02.jpg" alt="Noel Spirandelli photography">
+            <img src="assets/images/pantone/2003-01.jpg" alt="Martina Lang photography">
+        </app-color-swatch-large>
 
-    <app-color-swatch-large name="Fuchsia Rose"
-                            pantone="Pantone 17-2031"
-                            hex="#C74375"
-                            year="2001"
-                            id="2001"
-                            [imageSources]="['https://maciekjasik.com/', 'https://andreamartinucci.com/', 'http://crucamara.com/']">
-        <img src="assets/images/pantone/2001-01.jpg" alt="Maciek Jasik photography">
-        <img class="large" src="assets/images/pantone/2001-03.jpg" alt="Andrea Martinucci painting">
-        <img src="assets/images/pantone/2001-02.jpg" alt="Cru Camara photography">
-    </app-color-swatch-large>
+        <app-color-swatch-large name="True Red"
+                                pantone="Pantone 19-1664"
+                                hex="#BF1932"
+                                year="2002"
+                                id="2002"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="['http://crucamara.com/', 'https://www.alexprager.com/', 'https://www.izaacenciso.com/']">
+            <img class="large" src="assets/images/pantone/2002-01.jpg" alt="Cru Camara photography">
+            <img src="assets/images/pantone/2002-02.jpg" alt="Alex Prager photography">
+            <img src="assets/images/pantone/2002-03.jpg" alt="Izaac Enciso photography">
+        </app-color-swatch-large>
 
-    <app-color-swatch-large name="Cerulean"
-                            pantone="Pantone 15-4020"
-                            hex="#9BB7D4"
-                            year="2000"
-                            id="2000"
-                            [imageSources]="[ 'https://www.kimbyungkwan.com/', 'https://annabukliewer.com/','http://www.inaphotography.com/']">
-        <img src="assets/images/pantone/2000-03.jpg" alt="Kim Byungkwan collage">
-        <img src="assets/images/pantone/2000-02.jpg" alt="Anna Bukliewer collage">
-        <img class="large" src="assets/images/pantone/2000-01.jpg" alt="Ina Jang photography">
-    </app-color-swatch-large>
+        <app-color-swatch-large name="Fuchsia Rose"
+                                pantone="Pantone 17-2031"
+                                hex="#C74375"
+                                year="2001"
+                                id="2001"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="['https://maciekjasik.com/', 'https://andreamartinucci.com/', 'http://crucamara.com/']">
+            <img src="assets/images/pantone/2001-01.jpg" alt="Maciek Jasik photography">
+            <img class="large" src="assets/images/pantone/2001-03.jpg" alt="Andrea Martinucci painting">
+            <img src="assets/images/pantone/2001-02.jpg" alt="Cru Camara photography">
+        </app-color-swatch-large>
+
+        <app-color-swatch-large name="Cerulean"
+                                pantone="Pantone 15-4020"
+                                hex="#9BB7D4"
+                                year="2000"
+                                id="2000"
+                                [isHidingColorBar]="isHidingColorBar"
+                                [imageSources]="[ 'https://www.kimbyungkwan.com/', 'https://annabukliewer.com/','http://www.inaphotography.com/']">
+            <img src="assets/images/pantone/2000-03.jpg" alt="Kim Byungkwan collage">
+            <img src="assets/images/pantone/2000-02.jpg" alt="Anna Bukliewer collage">
+            <img class="large" src="assets/images/pantone/2000-01.jpg" alt="Ina Jang photography">
+        </app-color-swatch-large>
+    </div>
 </div>

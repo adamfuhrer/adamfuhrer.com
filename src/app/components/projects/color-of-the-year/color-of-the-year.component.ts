@@ -1,6 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostBinding, Inject, Input, OnInit} from '@angular/core';
 import {Breadcrumb, NavigationService} from '../../../services/navigation.service';
 import {Title} from '@angular/platform-browser';
+import {MatSlideToggleChange} from '@angular/material/slide-toggle';
+import {DOCUMENT} from '@angular/common';
 
 @Component({
     selector: 'app-color-of-the-year',
@@ -8,10 +10,12 @@ import {Title} from '@angular/platform-browser';
     styleUrls: ['./color-of-the-year.component.scss']
 })
 export class ColorOfTheYearComponent implements OnInit {
+    @HostBinding('class.is-hiding-color-bar') isHidingColorBar = false;
     colorSwatches = [];
 
     constructor(private navigationService: NavigationService,
-                private titleService: Title) {
+                private titleService: Title,
+                @Inject(DOCUMENT) private document: any) {
     }
 
     ngOnInit() {
@@ -122,5 +126,9 @@ export class ColorOfTheYearComponent implements OnInit {
 
     onScrollToTopClick() {
         window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    onShowColorsToggleChange(event: MatSlideToggleChange) {
+        this.isHidingColorBar = event.checked;
     }
 }

@@ -18,7 +18,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-left: 30px;
         color: $white;
         text-shadow: $text-shadow-normal;
         width: 100%;
@@ -33,15 +32,17 @@
             width: 100%;
             height: 100%;
             margin-right: 20px;
+            padding-left: 30px;
+        }
 
-            .name {
-                font-size: 4rem;
-                line-height: 1.2;
-            }
+        .name {
+            font-size: 4rem;
+            line-height: 1.2;
+            min-width: max-content;
+        }
 
-            .pantone, .hex {
-                font-size: 1.8rem;
-            }
+        .pantone, .hex {
+            font-size: 1.8rem;
         }
 
         .right {
@@ -92,26 +93,95 @@
         }
     }
 
+    &.has-second-color {
+        .top-bar {
+            .left {
+                width: 50%;
+            }
+
+            .right {
+                position: relative;
+                width: 50%;
+                padding-left: 30px;
+                justify-content: space-between;
+
+                .year {
+                    position: absolute;
+                    font-size: 2rem;
+                    top: 0;
+                    left: -21px;
+                }
+            }
+        }
+
+        @media screen and (max-width: $breakpoint-medium) {
+            .top-bar {
+                .right {
+                    padding-left: 20px;
+
+                    .year {
+                        font-size: 1.6rem;
+                        left: -16px;
+                    }
+                }
+            }
+        }
+    }
+
     .images {
         display: flex;
         flex-direction: row;
         height: 100%;
         max-height: 320px;
+        position: relative;
     }
 
-    @media screen and (max-width: 880px) {
+    &.is-hiding-color-bar {
+        padding-top: 4px;
+
+        .card-wrapper {
+            border-radius: 0;
+            background: $white;
+            box-shadow: none;
+            overflow: visible;
+        }
+
+        .year {
+            position: absolute;
+            top: 10px;
+            left: 24px;
+            color: $white;
+            font-size: 5rem;
+            font-family: $amaranth;
+            z-index: 1;
+            text-shadow: $text-shadow-normal;
+        }
+
+        @media screen and (max-width: $breakpoint-medium) {
+            .year {
+                top: 10px;
+                left: 14px;
+                font-size: 2.4rem;
+            }
+        }
+
+
+    }
+
+    @media screen and (max-width: $breakpoint-medium) {
         .top-bar {
             height: 110px;
-            padding-left: 24px;
 
             .left {
-                .name {
-                    font-size: 2.2rem;
-                }
+                padding-left: 20px;
+            }
 
-                .pantone, .hex {
-                    font-size: 1.6rem;
-                }
+            .name {
+                font-size: 2.2rem;
+            }
+
+            .pantone, .hex {
+                font-size: 1.6rem;
             }
 
             .right {
@@ -127,6 +197,12 @@
                     }
                 }
             }
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+        .card-wrapper {
+            border-radius: 0;
         }
     }
 }

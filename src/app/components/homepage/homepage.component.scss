@@ -296,7 +296,7 @@ $swing-degrees: 5deg;
         }
     }
 
-    @media screen and (max-width: 880px) {
+    @media screen and (max-width: $breakpoint-medium) {
         margin-top: -106px;
 
         .content-wrapper {

@@ -75,6 +75,11 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
             margin-bottom: 30px;
         }
 
+        .palette-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
         app-color-swatch-large {
             img {
                 height: auto;
@@ -91,15 +96,53 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
             }
 
             + app-color-swatch-large {
-                margin-top: 40px;
+                margin-top: 30px;
             }
         }
     }
 
-    @media screen and (max-width: 880px) {
+    .toggle-wrapper {
+        display: flex;
+        height: 30px;
+        justify-content: flex-end;
+        align-items: center;
+
+        ::ng-deep {
+            .mat-slide-toggle-content {
+                font-family: $sans-serif;
+                color: $oil;
+                min-width: 100%;
+            }
+        }
+    }
+
+    &.is-hiding-color-bar {
+        .page-wrapper {
+            app-color-swatch-large {
+                + app-color-swatch-large {
+                    margin-top: 0;
+                }
+
+                img {
+                    border-radius: 3px;
+                }
+            }
+        }
+
+        .toggle-wrapper {
+            margin-bottom: 14px;
+        }
+    }
+
+
+    @media screen and (max-width: $breakpoint-medium) {
         .page-wrapper {
             .description {
                 margin-bottom: 30px;
+            }
+
+            .swatches-text {
+                font-size: 1.4rem;
             }
 
             app-color-swatch-large {
@@ -110,7 +153,14 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
         }
     }
 
-    @media screen and (min-width: 880px) {
+    @media screen and (max-width: $breakpoint-small) {
+        .palette-wrapper {
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-medium) {
         .page-wrapper {
             .swatches-wrapper {
                 justify-content: center;

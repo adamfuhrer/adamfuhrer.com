@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, HostBinding, Input, OnInit} from '@angular/core';
 
 @Component({
     selector: 'app-color-swatch-large',
@@ -12,6 +12,12 @@ export class ColorSwatchLargeComponent implements OnInit {
     @Input() year: string;
     @Input() link: string;
     @Input() imageSources: Array<string>;
+
+    @Input() @HostBinding('class.has-second-color') nameSecond: string;
+    @Input() pantoneSecond: string;
+    @Input() hexSecond: string;
+
+    @Input() @HostBinding('class.is-hiding-color-bar') isHidingColorBar: boolean;
 
     ngOnInit() {
     }

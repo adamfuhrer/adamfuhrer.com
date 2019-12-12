@@ -54,7 +54,7 @@
         }
     }
 
-    @media screen and (max-width: 880px) {
+    @media screen and (max-width: $breakpoint-medium) {
         .color-wrapper {
             min-width: 60px;
             height: 40px;
