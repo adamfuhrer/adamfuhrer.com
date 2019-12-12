@@ -4,7 +4,7 @@
     </svg>
 </button>
 <div class="page-wrapper" fadeIn>
-    <h1>Visualizing 20 Years of Pantone’s Color of the Year (2020-2000)</h1>
+    <h1>Visualizing Every Pantone Color of the Year: 2020-2000</h1>
     <div class="swatches-wrapper">
         <app-color-swatch *ngFor="let color of colorSwatches"
                           [color]="color.color"
@@ -18,15 +18,20 @@
     </div>
     <div class="description">
         <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-            a type specimen book.
+            The <a href="https://www.pantone.com/color-systems/pantone-color-systems-explained" target="_blank">Pantone Color System</a> is one of the most important color matching systems in the world.
+            Originating in 1963, the system aimed to help bring a solution to the complicated color matching process in the printing industry. Not
+            long after, Pantone became the easiest and simplest way to classify, communicate and match colors with the
+            use of a color catalog in a fan format. Every color, in every tone and tint was given a unique number to classify
+            it. For over 40 years, Pantone has been the go-to color matching system for not only the design industry but
+            also paint, textile and plastic manufacturers.
         </p>
         <p>
-            To commemorate 20 years of Pantone ….. Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer
-            took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-            but also the leap into
+            In 2000, the Pantone Color Institute created the <a href="https://www.pantone.com/color-systems/pantone-color-systems-explained"><i>Pantone Color of the Year</i></a> as a way to inspire art and
+            design in all of its forms for the upcoming year. The color experts at Pantone make their pick based on
+            “what is needed in our world today.” To commemorate over two decades of Pantone’s color choices, I built a
+            palette that matches each color to imagery from some of my favorite artists and photographers from around
+            the world. Each image has a corresponding link in the top bar of its color, to the artist/photographer’s
+            website (on desktop).
         </p>
     </div>
     <app-color-swatch-large name="Classic Blue"
@@ -85,10 +90,10 @@
                             year="2016"
                             id="2016"
                             link="https://store.pantone.com/uk/en/rose-quartz-serenity-2016-color-of-the-year/"
-                            [imageSources]="['http://www.samoctigan.com/', 'https://vishalmarapon.com/', 'http://taelee.net/']">
+                            [imageSources]="['http://www.samoctigan.com/', 'https://vishalmarapon.com/', 'https://youarerockstar.tumblr.com/']">
         <img class="large" src="assets/images/pantone/2016-01.jpg" alt="Sam Octigan painting">
         <img src="assets/images/pantone/2016-02.jpg" alt="Vishal Marapon photography">
-        <img src="assets/images/pantone/2016-03.jpg" alt="Tae Lee painting">
+        <img src="assets/images/pantone/2016-03.jpg" alt="Nicholas Mottola Jacobsen collage art">
     </app-color-swatch-large>
 
     <app-color-swatch-large name="Marsala"
@@ -97,10 +102,10 @@
                             year="2015"
                             id="2015"
                             link="https://store.pantone.com/uk/en/marsala-2015-color-of-the-year/"
-                            [imageSources]="['http://www.vonnsumner.com/', 'https://natashakristian.com/', 'https://jeanne-s.com/']">
+                            [imageSources]="['http://www.vonnsumner.com/', 'https://www.diegobrambilla.com/', 'https://natashakristian.com/']">
         <img src="assets/images/pantone/2015-01.jpg" alt="Vonn Sumner painting">
+        <img class="large" src="assets/images/pantone/2015-03.jpg" alt="Diego Brambilla photography">
         <img src="assets/images/pantone/2015-02.jpg" alt="Natasha Kristian photography">
-        <img class="large" src="assets/images/pantone/2015-03.jpg" alt="Jeanne Ader & Jeanne Dekonink photography">
     </app-color-swatch-large>
 
     <app-color-swatch-large name="Radiant Orchid"
@@ -145,10 +150,10 @@
                             year="2011"
                             id="2011"
                             link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2011"
-                            [imageSources]="['https://www.instagram.com/sofles/', 'https://store.francoise-nielly.com/en/', 'https://www.instagram.com/edhodgkinson/']">
+                            [imageSources]="['https://www.instagram.com/sofles/', 'https://store.francoise-nielly.com/en/', 'http://www.lorihersberger.com/']">
         <img src="assets/images/pantone/2011-02.jpg" alt="sofles graffiti">
         <img class="large" src="assets/images/pantone/2011-03.jpg" alt="Francoise Nielly painting">
-        <img src="assets/images/pantone/2011-01.jpg" alt="Ed Hodgkinson art">
+        <img src="assets/images/pantone/2011-01.jpg" alt="Lori Hersberger neon art">
     </app-color-swatch-large>
 
     <app-color-swatch-large name="Turquoise"
@@ -181,9 +186,9 @@
                             year="2008"
                             id="2008"
                             link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2008"
-                            [imageSources]="['https://www.instagram.com/sebasrivasart/', 'https://emontoufanian.com/', 'http://www.olafbreuning.com/']">
+                            [imageSources]="['https://www.instagram.com/sebasrivasart/', 'https://chloe-newman.com/', 'http://www.olafbreuning.com/']">
         <img src="assets/images/pantone/2008-03.jpg" alt="sebasrivasart">
-        <img src="assets/images/pantone/2008-01.jpg" alt="Emon Toufanian art">
+        <img src="assets/images/pantone/2008-01.jpg" alt="Chloe Newman photography">
         <img class="large" src="assets/images/pantone/2008-02.jpg" alt="Olaf Breuning photography">
     </app-color-swatch-large>
 
@@ -193,9 +198,9 @@
                             year="2007"
                             id="2007"
                             link="https://www.pantone.com/color-intelligence/color-of-the-year/color-of-the-year-2007"
-                            [imageSources]="['https://anastasiiachorna.com/',  'http://cherinefahd.com/', 'https://ollygeary.com/']">
+                            [imageSources]="['https://jmsanabria.com/', 'https://anastasiiachorna.com/', 'https://ollygeary.com/']">
+        <img src="assets/images/pantone/2007-01.jpg" alt="Juan Manuel Sanabria painting">
         <img class="large" src="assets/images/pantone/2007-03.jpg" alt="Anastasiia Chorna photography">
-        <img src="assets/images/pantone/2007-01.jpg" alt="Cherine Fahd photography">
         <img src="assets/images/pantone/2007-02.jpg" alt="Olly Geary photography">
     </app-color-swatch-large>
 
@@ -204,10 +209,10 @@
                             hex="#DECDBE"
                             year="2006"
                             id="2006"
-                            [imageSources]="['https://robertgaudette.tumblr.com/', 'https://www.racheljoanis.com/', 'https://www.luiferreyra.com/']">
+                            [imageSources]="['https://robertgaudette.tumblr.com/', 'https://www.luiferreyra.com/', 'https://www.racheljoanis.com/']">
         <img src="assets/images/pantone/2006-01.jpg" alt="Robert Gaudette photography">
-        <img class="large" src="assets/images/pantone/2006-02.jpg" alt="Rachel Joanis illustration">
         <img src="assets/images/pantone/2006-03.jpg" alt="Lui Ferreyra art">
+        <img class="large" src="assets/images/pantone/2006-02.jpg" alt="Rachel Joanis illustration">
     </app-color-swatch-large>
 
     <app-color-swatch-large name="Blue Turquoise"
