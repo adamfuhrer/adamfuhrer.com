@@ -98,7 +98,8 @@
         height: 100%;
         position: relative;
         align-items: flex-start;
-        //max-height: 320px;
+        max-height: 312px;
+        overflow: hidden;
     }
 
     &.has-second-color {
@@ -128,14 +129,13 @@
                     padding-left: 20px;
 
                     .year {
-                        font-size: 1.6rem;
-                        left: -16px;
+                        font-size: 1.4rem;
+                        left: -14px;
                     }
                 }
             }
         }
     }
-
 
     &.is-hiding-color-bar {
         padding-top: 4px;
@@ -156,6 +156,11 @@
             font-family: $amaranth;
             z-index: 1;
             text-shadow: $text-shadow-normal;
+            pointer-events: none;
+        }
+
+        .images {
+            border-radius: 10px;
         }
 
         @media screen and (max-width: $breakpoint-medium) {
@@ -164,10 +169,20 @@
                 left: 14px;
                 font-size: 2.4rem;
             }
+
+            .images {
+                border-radius: 0;
+            }
         }
     }
 
     @media screen and (max-width: $breakpoint-medium) {
+        .card-wrapper {
+            border-radius: 0;
+            box-shadow: none;
+            background: $white;
+        }
+
         .top-bar {
             height: 110px;
 
@@ -189,19 +204,16 @@
                 }
 
                 .links {
+                    margin-right: 6px;
                     margin-left: 10px;
+                    padding-top: 6px;
+                    padding-bottom: 6px;
 
                     .bottom {
                         display: none;
                     }
                 }
             }
-        }
-    }
-
-    @media screen and (max-width: $breakpoint-small) {
-        .card-wrapper {
-            border-radius: 0;
         }
     }
 }
