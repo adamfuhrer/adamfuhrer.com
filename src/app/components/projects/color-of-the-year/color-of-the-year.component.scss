@@ -17,7 +17,7 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
         z-index: 1;
         box-shadow: $box-shadow-strong;
         transition: $transition-normal;
-        border: 2px solid $green;
+        border: 1px solid $green;
 
         img {
             width: 24px;
@@ -55,7 +55,7 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
             font-weight: 300;
         }
 
-        .swatches-wrapper {
+        .top-colors {
             display: flex;
             align-items: center;
             flex-wrap: wrap;
@@ -73,8 +73,6 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
 
         app-color-swatch-large {
             a {
-                max-width: 23.5%;
-                overflow: hidden;
                 opacity: 1;
 
                 &:hover, &:focus {
@@ -83,10 +81,6 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
 
                 + a {
                     margin-left: 4px;
-                }
-
-                &.large {
-                    max-width: 52.9%;
                 }
 
                 &:hover {
@@ -102,6 +96,15 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
             + app-color-swatch-large {
                 margin-top: 30px;
             }
+        }
+
+        .project-by {
+            display: flex;
+            justify-content: center;
+            margin-top: 60px;
+            color: $oil;
+            font-weight: $light;
+            font-size: 1.6rem;
         }
     }
 
@@ -136,28 +139,44 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
 
     &.is-hiding-color-bar {
         .page-wrapper {
-            app-color-swatch-large {
-                + app-color-swatch-large {
-                    margin-top: 0;
-                }
+            app-color-swatch-large + app-color-swatch-large {
+                margin-top: 0;
             }
         }
 
         .toggle-wrapper {
             margin-bottom: 14px;
         }
+
+        @media screen and (max-width: $breakpoint-medium) {
+            .page-wrapper {
+                app-color-swatch-large + app-color-swatch-large {
+                    margin-top: -4px;
+                }
+            }
+        }
     }
 
     @media screen and (max-width: $breakpoint-medium) {
         .page-wrapper {
+            h1 {
+                text-align: unset;
+                font-size: 3.4rem;
+                margin-bottom: 6px;
+            }
+
             .heading-description {
+                text-align: unset;
+                margin-bottom: 20px;
                 font-size: 2.4rem;
             }
 
-            app-color-swatch-large {
-                + app-color-swatch-large {
-                    margin-top: 0;
-                }
+            .description {
+                margin-bottom: 30px;
+            }
+
+            app-color-swatch-large + app-color-swatch-large {
+                margin-top: 0;
             }
 
             .palette-wrapper {
@@ -165,17 +184,21 @@ $pantone-gradient: linear-gradient(90deg, #0F4C81, #FF6F61, #5F4B8B, #88B04B, #9
                 margin-right: -24px;
             }
 
-            .swatches-wrapper {
+            .top-colors {
                 margin-bottom: 30px;
-                margin-left: -16px;
-                margin-right: -16px;
+                margin-left: -3px;
+                margin-right: -3px;
+            }
+
+            .project-by {
+                margin-top: 30px;
             }
         }
     }
 
     @media screen and (min-width: $breakpoint-medium) {
         .page-wrapper {
-            .swatches-wrapper {
+            .top-colors {
                 justify-content: center;
                 padding-bottom: 22px;
                 padding-top: 18px;
