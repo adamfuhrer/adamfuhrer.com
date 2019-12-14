@@ -4,7 +4,8 @@
     </svg>
 </button>
 <div class="page-wrapper" fadeIn>
-    <h1>Visualizing Every Pantone Color of the Year: 2020-2000</h1>
+    <h1>Visualizing Every Pantone Color of the Year</h1>
+    <div class="heading-description">22 Colors From 2020-2000</div>
     <div class="swatches-wrapper">
         <app-color-swatch *ngFor="let color of colorSwatches"
                           [color]="color.color"
@@ -12,16 +13,12 @@
                           [year]="color.year">
         </app-color-swatch>
     </div>
-    <div class="swatches-text">
-        <img src="assets/images/emojis/pointing-up.png" alt="Pointing up emoji">
-        <span>Click a color to scroll to it</span>
-    </div>
     <div class="description">
         <p>
-            The <a href="https://www.pantone.com/color-systems/pantone-color-systems-explained" target="_blank">Pantone Color System</a> is one of the most important color matching systems in the world.
+            The <a href="https://www.pantone.com/color-systems/pantone-color-systems-explained">Pantone Color System</a> is one of the most important color matching systems in the world.
             Originating in 1963, the system aimed to help bring a solution to the complicated color matching process in the printing industry. Not
             long after, Pantone became the easiest and simplest way to classify, communicate and match colors with the
-            use of a color catalog in a fan format. Every color, in every tone and tint was given a unique number to classify
+            use of a color catalog in a fan format. Every color, in every tone and tint was given a <a href="https://www.pantone.com/color-finder">unique number</a> to classify
             it. For over 40 years, Pantone has been the go-to color matching system for not only the design industry but
             also paint, textile and plastic manufacturers.
         </p>
@@ -414,4 +411,6 @@
             </a>
         </app-color-swatch-large>
     </div>
+
+
 </div>

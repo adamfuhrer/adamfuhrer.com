@@ -62,7 +62,7 @@
                 padding-top: 10px;
                 padding-bottom: 10px;
                 margin-right: 10px;
-                margin-left: 20px;
+                margin-left: 10px;
 
                 .link {
                     display: flex;
@@ -172,6 +172,7 @@
 
             .images {
                 border-radius: 0;
+                align-items: center;
             }
         }
     }
@@ -205,7 +206,6 @@
 
                 .links {
                     margin-right: 6px;
-                    margin-left: 10px;
                     padding-top: 6px;
                     padding-bottom: 6px;
 

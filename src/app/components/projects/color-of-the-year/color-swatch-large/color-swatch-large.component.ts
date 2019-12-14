@@ -16,7 +16,6 @@ export class ColorSwatchLargeComponent implements OnInit {
     @Input() @HostBinding('class.has-second-color') nameSecond: string;
     @Input() pantoneSecond: string;
     @Input() hexSecond: string;
-
     @Input() @HostBinding('class.is-hiding-color-bar') isHidingColorBar: boolean;
 
     ngOnInit() {

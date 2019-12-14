@@ -1,4 +1,4 @@
-import {Component, HostBinding, Inject, Input, OnInit} from '@angular/core';
+import {Component, HostBinding, Inject, OnInit} from '@angular/core';
 import {Breadcrumb, NavigationService} from '../../../services/navigation.service';
 import {Title} from '@angular/platform-browser';
 import {MatSlideToggleChange} from '@angular/material/slide-toggle';
@@ -19,7 +19,7 @@ export class ColorOfTheYearComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.titleService.setTitle('Visualizing Every Pantone Color of The Year: 2000-2020 · Adam Fuhrer');
+        this.titleService.setTitle('Visualizing Every Pantone Color of the Year (22 Colors From 2020-2000)');
 
         this.navigationService.emitBreadcrumbItems([
             {
@@ -28,13 +28,13 @@ export class ColorOfTheYearComponent implements OnInit {
                 isActive: false
             } as Breadcrumb,
             {
-                text: 'COLOR OF THE YEAR',
-                routerLink: '/pantone-color-of-the-year-visualization',
+                text: 'PANTONE COLOR OF THE YEAR',
+                routerLink: '/visualizing-every-pantone-color-of-the-year',
                 isActive: true
             } as Breadcrumb
         ]);
 
-        // Color swatches
+        // Colors
         this.colorSwatches = [
             {
                 color: '#0F4C81',
@@ -125,7 +125,7 @@ export class ColorOfTheYearComponent implements OnInit {
     }
 
     onScrollToTopClick() {
-        window.scrollTo({top: 0, behavior: 'smooth'});
+        window.scroll({top: 0, behavior: 'smooth'});
     }
 
     onShowColorsToggleChange(event: MatSlideToggleChange) {

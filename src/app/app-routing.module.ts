@@ -15,7 +15,7 @@ const routes: Routes = [
     {path: 'accuracy-of-mechanical-watches/seiko-5-sports', component: SeikoFiveComponent},
     {path: 'accuracy-of-mechanical-watches/rolex-submariner', component: RolexSubmarinerComponent},
     {path: 'the-curated-feed', component: TheCuratedFeedComponent},
-    {path: 'pantone-color-of-the-year-visualization', component: ColorOfTheYearComponent},
+    {path: 'visualizing-every-pantone-color-of-the-year', component: ColorOfTheYearComponent},
     {path: '**', redirectTo: '', component: HomepageComponent},
 ];
 
