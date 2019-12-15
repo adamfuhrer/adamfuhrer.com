@@ -19,7 +19,7 @@ export class ColorOfTheYearComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.titleService.setTitle('Visualizing Every Pantone Color of the Year (22 Colors From 2020-2000)');
+        this.titleService.setTitle('Visualizing Every Pantone Color of the Year');
 
         this.navigationService.emitBreadcrumbItems([
             {
