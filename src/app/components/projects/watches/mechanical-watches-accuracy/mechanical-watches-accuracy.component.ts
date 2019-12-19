@@ -13,7 +13,7 @@ export class MechanicalWatchesAccuracyComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.titleService.setTitle('Accuracy of Mechanical Watches · Adam Fuhrer');
+        this.titleService.setTitle('Accuracy of Mechanical Watches');
 
         this.navigationService.emitBreadcrumbItems([
             {
@@ -23,7 +23,7 @@ export class MechanicalWatchesAccuracyComponent implements OnInit {
             } as Breadcrumb,
             {
                 text: 'WATCH ACCURACY',
-                routerLink: '/projects/accuracy-of-mechanical-watches',
+                routerLink: '/accuracy-of-mechanical-watches',
                 isActive: true
             } as Breadcrumb
         ]);

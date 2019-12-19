@@ -16,7 +16,7 @@ export class SeikoFiveComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.titleService.setTitle('Seiko 5 Sports Accuracy · Adam Fuhrer');
+        this.titleService.setTitle('Seiko 5 Sports Accuracy');
 
         this.navigationService.emitBreadcrumbItems([
             {
