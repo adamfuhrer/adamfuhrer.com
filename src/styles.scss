@@ -31,6 +31,26 @@ a {
         color: darken($orange, 6%);
         outline: none;
     }
+
+    &.color {
+        font-size: 1.6rem;
+        background-size: cover;
+        font-weight: $medium;
+        padding: 2px 8px;
+        border-radius: 4px;
+        transition: $transition-normal;
+        color: $white;
+        -webkit-text-fill-color: $white;
+        text-shadow: $text-shadow-normal;
+        background: linear-gradient(120deg, $orange 0, #f37055 15%, #ef4e7b 30%, #a166ab 44%, #5073b8 58%, $blue 72%, $green 86%, #6dba82 100%);
+        -webkit-background-clip: unset;
+
+        &:hover, &:focus {
+            transition: $transition-normal;
+            box-shadow: $box-shadow-strong;
+            transform: translateY(-4px);
+        }
+    }
 }
 
 p {

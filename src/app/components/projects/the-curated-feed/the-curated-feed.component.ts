@@ -16,7 +16,7 @@ export class TheCuratedFeedComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.titleService.setTitle('The Curated Feed · Adam Fuhrer');
+        this.titleService.setTitle('The Curated Feed');
 
         this.navigationService.emitBreadcrumbItems([
             {
@@ -26,7 +26,7 @@ export class TheCuratedFeedComponent implements OnInit {
             } as Breadcrumb,
             {
                 text: 'THE CURATED FEED',
-                routerLink: '/projects/the-curated-feed',
+                routerLink: '/the-curated-feed',
                 isActive: true
             } as Breadcrumb
         ]);

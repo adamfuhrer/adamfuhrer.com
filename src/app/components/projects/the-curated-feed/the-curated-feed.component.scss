@@ -6,21 +6,9 @@
             margin-bottom: 10px;
         }
 
-        .link {
-            color: #E68C0F;
-            border: 1px solid #E68C0F;
-            background: rgba(230, 140, 15, 0.06);
-            margin-bottom: 30px;
-            font-size: 1.6rem;
-            padding: 6px 10px;
-            border-radius: 6px;
-            width: max-content;
-            transition: $transition-normal;
-
-            &:hover, &:focus {
-                background: rgba(230, 140, 15, 0.10);
-                transition: $transition-normal;
-            }
+        a.color {
+            width: 160px;
+            margin-bottom: 20px;
         }
 
         .description {
