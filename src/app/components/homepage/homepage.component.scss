@@ -50,10 +50,9 @@ $swing-degrees: 5deg;
             left: calc(50% - 8px);
             width: 16px;
             height: 16px;
-            background: #ff92aa;
+            background: #E68C0F;
             border-radius: 50%;
             box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2);
-            border: 1px solid $pink;
             z-index: 1;
         }
 
@@ -219,7 +218,7 @@ $swing-degrees: 5deg;
             flex-direction: column;
             width: 100%;
             max-width: 480px;
-            margin-top: 30px;
+            margin-top: 40px;
             border-radius: 10px;
 
             .project-name {
