@@ -8,6 +8,7 @@ import {MechanicalWatchesAccuracyComponent} from './components/projects/watches/
 import {TheCuratedFeedComponent} from './components/projects/the-curated-feed/the-curated-feed.component';
 import {ColorOfTheYearComponent} from './components/projects/color-of-the-year/color-of-the-year.component';
 import {PortraitsComponent} from './components/projects/portraits/portraits.component';
+import {GlitchArtComponent} from './components/projects/glitch-art/glitch-art.component';
 
 const routes: Routes = [
     {path: '', component: HomepageComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
     {path: 'the-curated-feed', component: TheCuratedFeedComponent},
     {path: 'visualizing-every-pantone-color-of-the-year', component: ColorOfTheYearComponent},
     {path: '28-portraits-by-28-photographers', component: PortraitsComponent},
+    {path: 'glitch-art-generator', component: GlitchArtComponent},
     {path: 'portraits', redirectTo: '28-portraits-by-28-photographers'},
     {path: '**', redirectTo: '', component: HomepageComponent},
 ];

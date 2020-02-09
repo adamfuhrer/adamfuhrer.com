@@ -16,6 +16,7 @@ import {TheCuratedFeedComponent} from './components/projects/the-curated-feed/th
 import {ColorOfTheYearComponent} from './components/projects/color-of-the-year/color-of-the-year.component';
 import {ColorSwatchComponent} from './components/projects/color-of-the-year/color-swatch/color-swatch.component';
 import {ColorSwatchLargeComponent} from './components/projects/color-of-the-year/color-swatch-large/color-swatch-large.component';
+import {GlitchArtComponent} from './components/projects/glitch-art/glitch-art.component';
 
 // Material
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
@@ -36,7 +37,8 @@ import { PortraitsComponent } from './components/projects/portraits/portraits.co
         ColorOfTheYearComponent,
         ColorSwatchComponent,
         ColorSwatchLargeComponent,
-        PortraitsComponent
+        PortraitsComponent,
+        GlitchArtComponent
     ],
     imports: [
         BrowserModule,
