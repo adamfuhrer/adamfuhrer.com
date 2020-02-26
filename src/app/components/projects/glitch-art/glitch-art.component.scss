@@ -10,8 +10,16 @@
             margin-bottom: 40px;
         }
 
+        a.screenshot {
+            margin-bottom: 60px;
+        }
+
         img {
             width: 100%;
+
+            + img {
+                margin-top: 80px;
+            }
         }
     }
 }
