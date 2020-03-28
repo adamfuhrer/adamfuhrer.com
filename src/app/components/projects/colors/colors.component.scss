@@ -1,0 +1,17 @@
+@import '../../../../styles/vars';
+
+:host {
+    .page-wrapper {
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 100%;
+
+            + img {
+                margin-top: 80px;
+            }
+        }
+    }
+}
