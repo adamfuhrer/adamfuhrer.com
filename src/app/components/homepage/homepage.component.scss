@@ -175,8 +175,8 @@ $swing-degrees: 5deg;
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
-                                width: 56px;
-                                height: 56px;
+                                width: 50px;
+                                height: 50px;
                                 background: rgba(255, 255, 255, 0.2);
                                 border-radius: 50%;
                                 transition: $transition-normal;
@@ -191,9 +191,9 @@ $swing-degrees: 5deg;
                                 }
 
                                 svg {
-                                    width: 26px;
-                                    height: 26px;
-                                    min-width: 28px;
+                                    width: 24px;
+                                    height: 24px;
+                                    min-width: 24px;
                                     fill: $white;
                                 }
                             }
