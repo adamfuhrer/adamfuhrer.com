@@ -1,1 +1,3 @@
-An Angular project by Adam Fuhrer. Made with Typescript, HTML & SCSS.
+The online home of Adam Fuhrer. 🏠
+
+Website: [adamfuhrer.com](https://adamfuhrer.com/)
