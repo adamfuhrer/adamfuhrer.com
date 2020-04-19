@@ -19,4 +19,18 @@
             }
         }
     }
+
+    @media screen and (max-width: $breakpoint-medium) {
+        .page-wrapper {
+            h5 {
+                margin-bottom: 20px;
+            }
+
+            img {
+                + img {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
 }
