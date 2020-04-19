@@ -31,8 +31,32 @@ main, article, aside, details, figcaption, figure, footer, header, hgroup, menu,
     display: block;
 }
 
-ol, ul {
+ul {
+    font-size: 1.6rem;
     list-style: none;
+    color: $oil;
+
+    li {
+        position: relative;
+        margin-top: 6px;
+        margin-left: 16px;
+
+        ul {
+            padding-left: 20px;
+        }
+
+        &::before {
+            position: absolute;
+            left: -14px;
+            top: 8px;
+            width: 6px;
+            height: 6px;
+            content: "";
+            border-radius: 50%;
+            background: $grey;
+            box-shadow: $box-shadow-weak;
+        }
+    }
 }
 
 blockquote, q {

@@ -30,14 +30,15 @@
             }
 
             .github {
-                width: 18px;
-                height: 18px;
+                display: flex;
+                width: 16px;
+                height: 16px;
                 margin-left: 10px;
 
                 svg {
                     fill: #333333;
-                    width: 18px;
-                    height: 18px;
+                    width: 16px;
+                    height: 16px;
                     transition: $transition-normal;
                 }
 
@@ -50,7 +51,7 @@
         }
 
         a.screenshot {
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
     }
 
@@ -70,13 +71,8 @@
             width: 100%;
             padding-top: 30px;
 
-            i {
-                margin-right: 6px;
-            }
-
-            img {
-                width: 20px;
-                height: 20px;
+            a {
+                margin-left: 6px;
             }
         }
     }
