@@ -1,40 +1,11 @@
 @import '../../../styles/vars';
 $head-shot-image-width: 150px;
-$swing-degrees: 5deg;
-
-@keyframes swing {
-    0% {
-        transform: rotate(0);
-    }
-    20% {
-        transform: rotate($swing-degrees);
-    }
-    40% {
-        transform: rotate(-$swing-degrees);
-    }
-    60% {
-        transform: rotate($swing-degrees);
-    }
-    80% {
-        transform: rotate(-$swing-degrees);
-    }
-    100% {
-        transform: rotate(0);
-    }
-}
 
 :host {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    &.is-swinging {
-        .content-wrapper {
-            .card-wrapper {
-                animation: swing ease-in-out 4s;
-            }
-        }
-    }
+    font-size: 1.6rem;
 
     .content-wrapper {
         position: relative;
@@ -42,281 +13,190 @@ $swing-degrees: 5deg;
         flex-direction: column;
         width: 100%;
         align-items: center;
-        margin-top: 10px;
 
-        .thumbtack {
-            position: absolute;
-            top: -100px;
-            left: calc(50% - 7px);
-            width: 14px;
-            height: 14px;
-            background: #CC7F16;
-            border-radius: 50%;
-            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .card-wrapper {
+        .profile {
             display: flex;
-            justify-content: center;
-            position: relative;
-            width: 100%;
-            transform-origin: center -90px;
+            align-items: center;
+            flex-direction: column;
+            text-shadow: $text-shadow-normal;
 
-            .hanger {
-                position: absolute;
-                top: -100px;
-                left: calc(50% - 9px);
-
-                .string {
-                    position: absolute;
-                    top: 55px;
-                    width: 300px;
-                    height: 3px;
-                    background: $light-grey;
-
-                    &.left {
-                        right: -14px;
-                        transform: rotate(-20deg);
-                    }
-
-                    &.right {
-                        transform: rotate(20deg);
-                        left: 4px;
-                    }
-                }
+            img.headshot {
+                width: $head-shot-image-width;
+                height: $head-shot-image-width;
+                min-width: $head-shot-image-width;
+                border-radius: 50%;
+                box-shadow: 0 1px 1px rgba(16, 27, 30, 0.15), 0 2px 2px rgba(16, 27, 30, 0.15), 0 4px 4px rgba(16, 27, 30, 0.15), 0 8px 8px rgba(16, 27, 30, 0.15), 0 16px 16px rgba(16, 27, 30, 0.15);
+                ;
             }
 
-            .profile-card {
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                background: $green;
-                border-radius: 15px;
-                padding: 40px 30px;
-                width: 100%;
-                max-width: 580px;
-                box-shadow: 0 1px 1px rgba(16, 27, 30, 0.15), 0 2px 2px rgba(16, 27, 30, 0.15), 0 4px 4px rgba(16, 27, 30, 0.15), 0 8px 8px rgba(16, 27, 30, 0.15), 0 16px 16px rgba(16, 27, 30, 0.15);
-                z-index: 1;
-                background: linear-gradient(150deg, #1488b5, #3a1891);
+            .name {
+                font-family: $amaranth;
+                font-size: 5.4rem;
+                color: $text-white;
+                letter-spacing: 2px;
+                line-height: 1;
+                margin-top: 14px;
+                text-align: center;
+            }
 
-                button.ghost {
-                    position: absolute;
+            .title {
+                font-size: 2rem;
+                line-height: 1;
+                margin-top: 16px;
+                text-align: center;
+                font-family: $code;
+                line-height: 1.6;
+            }
+
+            .links-wrapper {
+                display: flex;
+                flex-direction: row;
+                margin-top: 16px;
+
+                .link {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    bottom: 14px;
-                    right: 14px;
-                    width: 40px;
-                    height: 40px;
+                    width: 50px;
+                    height: 50px;
+                    background: rgba(255, 255, 255, 0.2);
                     border-radius: 50%;
                     transition: $transition-normal;
 
-                    img {
-                        width: 22px;
-                        height: 22px;
-                        min-width: 22px;
+                    +.link {
+                        margin-left: 10px;
                     }
 
-                    &:hover, &:focus {
+                    &:hover,
+                    &:focus {
                         transition: $transition-normal;
-                        background: rgba(255, 255, 255, 0.2);
-                    }
-                }
-
-                .profile {
-                    display: flex;
-                    align-items: center;
-
-                    img.headshot {
-                        width: $head-shot-image-width;
-                        height: $head-shot-image-width;
-                        min-width: $head-shot-image-width;
-                        margin-right: 40px;
-                        border-radius: 50%;
-                        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.16);
+                        background: rgba(255, 255, 255, 0.3);
                     }
 
-                    .right-content {
-                        display: flex;
-                        flex-direction: column;
-                        text-shadow: $text-shadow-normal;
-
-                        .name-wrapper {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            margin-bottom: 20px;
-
-                            .name {
-                                font-family: $amaranth;
-                                font-size: 5.4rem;
-                                color: $white;
-                                letter-spacing: 1px;
-                                line-height: 1;
-                                margin-top: 4px;
-                            }
-
-                            .title {
-                                font-size: 3rem;
-                                font-weight: $light;
-                                font-style: italic;
-                                color: $white;
-                                line-height: 1;
-                            }
-                        }
-
-                        .links-wrapper {
-                            display: flex;
-                            flex-direction: row;
-
-                            .link {
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                width: 50px;
-                                height: 50px;
-                                background: rgba(255, 255, 255, 0.2);
-                                border-radius: 50%;
-                                transition: $transition-normal;
-
-                                + .link {
-                                    margin-left: 10px;
-                                }
-
-                                &:hover, &:focus {
-                                    transition: $transition-normal;
-                                    background: rgba(255, 255, 255, 0.3);
-                                }
-
-                                svg {
-                                    width: 24px;
-                                    height: 24px;
-                                    min-width: 24px;
-                                    fill: $white;
-                                }
-                            }
-                        }
+                    svg {
+                        width: 24px;
+                        height: 24px;
+                        min-width: 24px;
+                        fill: $text-white;
                     }
                 }
             }
         }
 
-        section.bio {
-            max-width: 580px;
-            margin-top: 60px;
-            font-size: 2.2rem;
-            color: $black;
-            font-weight: $light;
+        p {
+            margin-top: 90px;
+            font-size: 1.6rem;
+            font-family: $code;
+            max-width: 500px;
         }
 
         section.projects {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 40px;
-            max-width: 1100px;
-            margin-top: 60px;
-            padding-left: 40px;
-            padding-right: 40px;
+            display: flex;
+            flex-direction: column;
+            max-width: 880px;
+            margin-top: 80px;
 
             .project {
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
                 align-items: flex-start;
-                transition: $transition-normal;
-                color: $oil;
-                font-style: normal;
-                font-size: 2rem;
-                font-weight: $semi-bold;
-                box-shadow: 0 1px 1px rgba(16, 27, 30, 0.1), 0 2px 2px rgba(16, 27, 30, 0.1), 0 4px 4px rgba(16, 27, 30, 0.1), 0 8px 8px rgba(16, 27, 30, 0.1);
-                border-radius: 8px;
-                overflow: hidden;
-                background: $off-white;
-                transform: scale(1);
 
-                &:hover, &:focus {
-                    transition: $transition-normal;
-                    transform: scale(1.04);
+                +.project {
+                    margin-top: 50px;
                 }
 
                 img {
                     width: 100%;
+                    max-width: 280px;
+                    box-shadow: $box-shadow-strong;
+                    margin-right: 30px;
+                    border-radius: 8px;
                 }
 
-                .name {
-                    padding: 20px;
-                    width: 100%;
+                .right {
+                    .name {
+                        font-family: $amaranth;
+                        font-size: 2.4rem;
+                        width: 100%;
+                        margin-bottom: 14px;
+                    }
+
+                    .description {
+                        margin-bottom: 20px;
+                        font-family: $code;
+                        color: rgb(255 255 255 / 0.8);
+                    }
+
+                    a.main {
+                        display: inline-block;
+                        font-family: $code;
+                        padding: 6px 10px;
+                        display: inline-block;
+                        border-radius: 6px;
+                        box-shadow: $box-shadow-strong;
+                        background: rgba(120, 226, 160, .20);
+                        transition: $transition-normal;
+
+                        &:hover,
+                        &:focus {
+                            transition: $transition-normal;
+                            background: rgba(120, 226, 160, .26);
+                        }
+
+                    }
                 }
             }
         }
     }
 
     @media screen and (max-width: $breakpoint-medium) {
-        margin-top: -106px;
-
         .content-wrapper {
-            margin-top: 0;
+            .profile {
+                display: flex;
+                justify-content: center;
 
-            .card-wrapper {
-                width: 100%;
-                max-width: 500px;
-
-                .hanger {
-                    display: none;
+                img.headshot {
+                    margin-bottom: 20px;
+                    margin-right: 0;
+                    width: 150px;
+                    height: 150px;
+                    min-width: 150px;
                 }
 
-                .profile-card {
-                    padding: 30px;
+                .name {
+                    font-size: 4.2rem;
+                    text-align: center;
+                }
 
-                    button.ghost {
-                        display: none;
-                    }
-
-                    .profile {
-                        flex-direction: column;
-
-                        img.headshot {
-                            margin-bottom: 20px;
-                            margin-right: 0;
-                            width: 150px;
-                            height: 150px;
-                            min-width: 150px;
-                        }
-
-                        .right-content {
-                            .name-wrapper {
-                                height: 100%;
-                                align-items: center;
-                                margin-bottom: 30px;
-
-                                .name {
-                                    font-size: 4.2rem;
-                                    text-align: center;
-                                }
-                            }
-
-                            .links-wrapper {
-                                justify-content: center;
-                            }
-                        }
-                    }
+                .title {
+                    font-size: 1.8rem;
                 }
             }
 
             section.projects {
-                margin-top: 30px;
+                margin-top: 50px;
                 max-width: 500px;
-                grid-template-columns: 1fr;
-                grid-gap: 30px;
                 padding-left: 0;
                 padding-right: 0;
-            }
 
-            section.bio {
-                max-width: 500px;
-                margin-top: 30px;
+                .project {
+                    flex-direction: column;
+
+                    img {
+                        max-width: 100%;
+                        margin-right: 0;
+                        margin-bottom: 20px;
+                    }
+
+                    +.project {
+                      margin-top: 60px;
+                    }
+                }
             }
+        }
+
+        section.bio {
+            margin-top: 30px;
         }
     }
 }

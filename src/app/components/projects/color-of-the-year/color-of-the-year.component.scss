@@ -39,7 +39,6 @@
         .heading-description {
             text-align: center;
             margin-bottom: 30px;
-            color: #888888;
             font-family: $sans-serif;
             font-size: 3rem;
             font-weight: 300;
@@ -125,14 +124,12 @@
                 .mat-slide-toggle-label {
                     padding: 10px;
                     cursor: pointer;
-                    background: $off-white;
-                    border: 1px solid #F1F1F1;
+                    background: $transparent-background;
                     border-radius: 6px;
                 }
 
                 .mat-slide-toggle-content {
                     font-family: $sans-serif;
-                    color: $oil;
                     min-width: 100%;
                 }
             }
@@ -206,9 +203,8 @@
                 padding-top: 18px;
                 padding-left: 0;
                 padding-right: 2px;
-                border: 1px solid #f1f1f1;
-                box-shadow: $box-shadow-strong;
-                background: $off-white;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
+                background: $transparent-background;
                 border-radius: 15px;
             }
         }

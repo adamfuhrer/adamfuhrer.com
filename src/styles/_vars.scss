@@ -2,6 +2,7 @@
 $sans-serif: "Lato", Helvetica, Arial, sans-serif;
 $amaranth: 'Amaranth', sans-serif;
 $serif: 'Vidaloka', serif;
+$code: 'Fira Code', monospace;
 
 // Dimensions
 $content-width: 900px;
@@ -15,7 +16,7 @@ $teal: #1398AF;
 $teal-dark: #006475;
 $blue: #3792CA;
 $pink: #EF4E7B;
-$green: #24A88C; // Previously #26B394
+$green: #00EC78;
 $red: #B81414;
 $orange: #E68C0F;
 
@@ -25,6 +26,10 @@ $grey: #999999;
 $light-grey: #DDDDDD;
 $off-white: #F5F5F5;
 $white: #FFFFFF;
+$text-white: #EFEDED;
+
+$transparent-background: rgba(255, 255, 255, 0.10);
+$transparent-border: 1px solid rgba(255, 255, 255, 0.3);
 
 // Shadows
 $box-shadow-weak: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);

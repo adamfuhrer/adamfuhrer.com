@@ -10,7 +10,6 @@
         border-radius: 15px;
         overflow: hidden;
         font-family: $amaranth;
-        background: $off-white;
         box-shadow: $box-shadow-strong;
     }
 
@@ -143,7 +142,6 @@
 
         .card-wrapper {
             border-radius: 0;
-            background: $white;
             box-shadow: none;
             overflow: visible;
         }
@@ -182,7 +180,6 @@
         .card-wrapper {
             border-radius: 0;
             box-shadow: none;
-            background: $white;
         }
 
         .top-bar {

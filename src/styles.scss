@@ -23,13 +23,14 @@ button {
 }
 
 a {
-    color: $orange;
     text-decoration: none;
-    transition: color 350ms $ease 0s;
+    color: $green;
+    text-shadow: 0 0 2px rgb(0 236 120 / .2), 0 0 5px rgb(0 236 120 / 20%);
+    transition: $transition-normal;
 
-    &:hover, &:focus {
-        color: darken($orange, 6%);
-        outline: none;
+    &:hover {
+      transition: $transition-normal;
+      color: lighten($green, 10%)
     }
 
     &.color {
@@ -54,7 +55,7 @@ a {
 }
 
 p {
-    color: $oil;
+    color: $text-white;
     font-size: 1.6rem;
 
     + p {

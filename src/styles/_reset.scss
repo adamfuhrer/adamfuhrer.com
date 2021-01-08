@@ -13,6 +13,7 @@ html {
     //height: 100%;
     font-size: 62.5%;
     box-sizing: border-box;
+    background: #272A37;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
     height: 100%;
     font-size: 14px;
     line-height: 1.5;
+    color: $text-white;
 }
 
 *, *:before, *:after {
