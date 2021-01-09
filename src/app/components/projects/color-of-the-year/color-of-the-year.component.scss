@@ -63,7 +63,6 @@
         app-color-swatch-large {
             a {
                 position: relative;
-                background-color:rgba(255,255,255,1);
 
                 // Workaround for Chrome since
                 &::after {
@@ -173,6 +172,15 @@
             .description {
                 margin-bottom: 30px;
             }
+
+          
+            app-color-swatch-large {
+              a {
+                  &::after {
+                    height: calc(100% - 5px);
+                  }
+                }
+              }
 
             app-color-swatch-large + app-color-swatch-large {
                 margin-top: 0;
